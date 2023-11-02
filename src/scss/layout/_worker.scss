@@ -1,0 +1,31 @@
+.worker {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 1.04vw, 20px);
+    font-size: clamp(14px, 1.56vw, 30px);
+    letter-spacing: -1px;
+
+    &__picture {
+        overflow: hidden;
+        
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-size: inherit;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
+        color: $color_green;
+    }
+
+    &__position {
+        margin: 0;
+        line-height: 100%;
+        color: rgba(255,255,255,.5)
+    }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --build"
+  },
+  "author": "krayser.ru",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-version-number": "latest",
+    "gulp-webp": "latest",
+    "gulp-webpcss": "latest",
+    "sass": "latest",
+    "webp-converter": "2.2.3",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery.ripples": "^0.6.3",
+    "jquery.marquee": "^1.6.0",
+    "gsap": "^3.12.2",
+    "split-type": "^0.3.3",
+    "@fancyapps/ui": "^5.0.24",
+    "@studio-freight/lenis": "^1.0.27",
+    "aos": "^2.3.4",
+    "matter-js": "^0.19.0",
+    "rellax": "^1.12.1",
+    "swiper": "^10.3.1"
+  }
+}

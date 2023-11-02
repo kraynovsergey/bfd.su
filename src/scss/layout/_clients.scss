@@ -1,0 +1,29 @@
+.clients {
+    &__title {
+        color: $color_green;
+        font-size: clamp(88px, 23.8vw, 457px);
+        text-transform: uppercase;
+        letter-spacing: calc(clamp(7px, 1.87vw, 36px) * -1);
+        line-height: 100%;
+        clear: both;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__logos {
+        clear: both;
+        margin-top: clamp(15px, 4.42vw, 85px);
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+
+        & img {
+            max-width: clamp(100px, 12.5vw, 240px);
+            max-height: clamp(30px, 3.75vw, 72px);
+            width: auto;
+            height: auto;
+            margin-right: clamp(56px, 16.87vw, 324px);
+        }
+    }
+}

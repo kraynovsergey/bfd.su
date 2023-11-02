@@ -1,0 +1,13 @@
+.main {
+    padding-bottom: clamp(30px, 5.2vw, 100px);
+    padding-top: clamp(10px, 4.16vw, 80px);
+
+    &._top {
+        padding-top: 0;
+        margin-top: calc(clamp(20px, 1.56vw, 30px) * -2 + clamp(36px, 2.29vw, 44px) * -1);
+    }
+
+    &._pb0 {
+        padding-bottom: 0;
+    }
+}

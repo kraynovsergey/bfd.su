@@ -1,0 +1,30 @@
+.about {
+    &__h1 {
+        text-align: center;
+        color: $color_green;
+        text-transform: uppercase;
+        font-size: clamp(14px, 1.56vw, 30px);
+        margin: 0;
+        padding: 0;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__subtitle {
+        font-size: clamp(30px, 7.81vw, 150px);
+        text-align: center;
+        line-height: 90%;
+        letter-spacing: calc(clamp(2.4px, 0.62vw, 12px) * -1);
+
+        & p {
+            margin: 0;
+
+            & span {
+                display: block;
+                color: $color_green;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.contacts {
+    &__cols {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: clamp(20px, 2.6vw, 50px);
+
+        @media (max-width: 575px) {
+            gap: 40px;
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: clamp(40px, 10.41vw, 200px);
+    }
+
+    &__h1 {
+        font-size: clamp(30px, 7.81vw, 150px);
+        letter-spacing: calc(clamp(2.4px, .62vw, 12px) * -1);
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: clamp(8px, 1.04vw, 20px);
+
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    &__social {
+        min-width: clamp(39px, 5.2vw, 100px);
+        max-width: clamp(39px, 5.2vw, 100px);
+        height: clamp(39px, 5.2vw, 100px);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #201A4E;
+        transition: .5s ease-in-out opacity;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        & svg {
+            width: 42%;
+            height: auto;
+            color: $color_green;
+        }
+    }
+
+    &__green {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: clamp(10px, 2.6vw, 50px);
+        padding-right: clamp(1px, 6.25vw, 120px);
+        margin-top: clamp(1px, 2.34vw, 45px);
+
+        @media (max-width: 575px) {
+            padding-right: 0;
+            margin-top: 0;
+        }
+    }
+
+    &__email {
+        font-size: clamp(24px, 5.2vw, 100px);
+        text-decoration: none;
+        letter-spacing: calc(clamp(1.9px, .41vw, 8px) * -1);
+        line-height: 100%;
+    }
+
+    &__messangers {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2.08vw, 40px);
+    }
+
+    &__messanger {
+        letter-spacing: -1px;
+        color: $color_green;
+        text-decoration: none;
+        line-height: 120%;
+
+        & span {
+            line-height: 120%;
+        }
+    }
+
+    &__addresses {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: clamp(10px, 1.04vw, 20px);
+    }
+
+    &__address {
+        margin: 0;
+        line-height: 100%;
+        color: $color_white;
+        letter-spacing: -1px;
+        text-decoration: none;
+    }
+
+    &__map {
+        height: clamp(329px, 43.02vw, 826px);
+
+        @media (max-width: 575px) {
+            height: 509px;
+        }
+    }
+}

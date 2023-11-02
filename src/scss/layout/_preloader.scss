@@ -1,0 +1,42 @@
+.preloader {
+    position: fixed;
+    z-index: 20;
+    background: $color_black;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+
+    &._hide {
+        transform: translateY(-100vh);
+
+        & .preloader__logo {
+            opacity: 0;
+            transform: scale(.5) translateX(-50%);
+        }
+    }
+
+    &__progress {
+        width: 0;
+        height: 10px;
+        background: $color_green;
+        //transition: .5s ease-in-out;
+    }
+
+    &__percent {
+        text-align: right;
+        font-size: clamp(68px, 18.22vw, 350px);
+        color: $color_green;
+        line-height: 100%;
+        letter-spacing: calc(clamp(5.4px, 1.45vw, 28px) * -1);
+        font-weight: 300;
+    }
+
+    &__logo {
+        color: $color_green;
+        width: clamp(104px, 15.67vw, 301px);
+        position: absolute;
+        bottom: clamp(20px, 2.6vw, 50px);
+        height: auto;
+        transition: .5s ease-in-out;
+    }
+}

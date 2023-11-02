@@ -1,0 +1,92 @@
+extends base_no_animation
+
+block meta
+    - var seotitle = 'Кейсы (меньше анимации)'
+    - var seodescription = 'Описание кейсов'
+    - var seokeywords = 'Ключевые слова страницы кейсов'
+
+block main
+    main.main
+        section.section._pt0
+            .container
+                h1.h1-big.animation-lines
+                    span(data-aos="lines") Кейсы
+
+                form.filter(action="#")
+                    .filter__line(data-aos="left-right-full")
+
+                    fieldset.filter__fieldset(data-filter-fieldset)
+                        .filter__fieldset-title.letter-spacing.animation-lines
+                            span(data-aos="lines") Индустрия:
+                        .filter__fieldset-content
+                            .filter__radio(data-aos="opacity" data-aos-delay="100")
+                                input(type="radio" name="industry" value="" id="industry-1" data-first checked)
+                                label.letter-spacing(for="industry-1") Все
+                            .filter__radio(data-aos="opacity" data-aos-delay="200")
+                                input(type="radio" name="industry" value="" id="industry-2")
+                                label.letter-spacing(for="industry-2") Корпоративный сайт
+                            .filter__radio(data-aos="opacity" data-aos-delay="300")
+                                input(type="radio" name="industry" value="" id="industry-3")
+                                label.letter-spacing(for="industry-3") Интернет-магазин
+                            .filter__radio(data-aos="opacity" data-aos-delay="400")
+                                input(type="radio" name="industry" value="" id="industry-4")
+                                label.letter-spacing(for="industry-4") Лендинг
+                            .filter__radio(data-aos="opacity" data-aos-delay="500")
+                                input(type="radio" name="industry" value="" id="industry-5")
+                                label.letter-spacing(for="industry-5") Прототип
+                            .filter__radio(data-aos="opacity" data-aos-delay="600")
+                                input(type="radio" name="industry" value="" id="industry-6")
+                                label.letter-spacing(for="industry-6") CRM
+
+                        .filter__reset-wrap
+                            button.filter__reset.btn-reset(type="button" data-filter-reset)
+
+                    fieldset.filter__fieldset(data-filter-fieldset)
+                        .filter__fieldset-title.letter-spacing.animation-lines
+                            span(data-aos="lines") Тип проекта:
+                        .filter__fieldset-content
+                            .filter__radio(data-aos="opacity" data-aos-delay="100")
+                                input(type="radio" name="type" value="" id="type-1" data-first checked)
+                                label.letter-spacing(for="type-1") Все
+                            .filter__radio(data-aos="opacity" data-aos-delay="200")
+                                input(type="radio" name="type" value="" id="type-2")
+                                label.letter-spacing(for="type-2") СМИ
+                            .filter__radio(data-aos="opacity" data-aos-delay="300")
+                                input(type="radio" name="type" value="" id="type-3")
+                                label.letter-spacing(for="type-3") Недвижимость
+                            .filter__radio(data-aos="opacity" data-aos-delay="400")
+                                input(type="radio" name="type" value="" id="type-4")
+                                label.letter-spacing(for="type-4") Производство
+                            .filter__radio(data-aos="opacity" data-aos-delay="500")
+                                input(type="radio" name="type" value="" id="type-5")
+                                label.letter-spacing(for="type-5") Услуги и сервис
+                            .filter__radio(data-aos="opacity" data-aos-delay="600")
+                                input(type="radio" name="type" value="" id="type-6")
+                                label.letter-spacing(for="type-6") Красота и здоровье
+                            .filter__radio(data-aos="opacity" data-aos-delay="700")
+                                input(type="radio" name="type" value="" id="type-7")
+                                label.letter-spacing(for="type-7") 3D
+                            .filter__radio(data-aos="opacity" data-aos-delay="800")
+                                input(type="radio" name="type" value="" id="type-8")
+                                label.letter-spacing(for="type-8") Ритейл
+
+                        .filter__reset-wrap
+                            button.filter__reset.btn-reset(type="button" data-filter-reset)
+
+                .cases
+                    +cases_item_no_animation('case-1', 'Kenigo', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#2C4EC7')
+                    +cases_item_no_animation('case-2', 'Axout', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#7F39F0')
+                    +cases_item_no_animation('case-3', 'Бюро переводов', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#C7352C')
+                    +cases_item_no_animation('case-4', 'Загородный клуб', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#33B175')
+                    +cases_item_no_animation('case-5', 'Polaris', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#CF45FF')
+                    +cases_item_no_animation('case-6', 'Знак', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#7F39F0')
+                    +cases_item_no_animation('case-7', 'РНС-МЕД', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#C7352C')
+                    +cases_item_no_animation('case-8', 'Прототип CRM', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#33B175')
+                button.cases__more.btn-reset(type="button" data-aos="opacity")
+                    span Смотреть ещё
+                    svg(width="97" height="102")
+                        use(xlink:href="@img/icons/icons.svg#arrow-right")
+                        
+
+                    
+                

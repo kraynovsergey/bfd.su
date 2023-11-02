@@ -1,0 +1,59 @@
+.principles {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        text-align: left;
+        text-transform: none;
+    }
+}
+
+.principle {
+    position: relative;
+    border-top: 1px solid $color_green;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: $color_green;
+    font-size: clamp(14px, 1.56vw, 30px);
+
+    @media (max-width: 991px) {
+        grid-template-columns: .3fr 1fr 1fr;
+    }
+
+    @media (max-width: 575px) {
+        grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: clamp(30px, 4.68vw, 90px);
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        top: -1px;
+        bottom: 0;
+        right: 0;
+        background: $color_black;
+    }
+
+    &__num {
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-size: inherit;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin: 0;
+    }
+}

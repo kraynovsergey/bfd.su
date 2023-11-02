@@ -1,0 +1,39 @@
+.technologies {
+    &__wrap {
+        border: 2px solid $color_green;
+        height: clamp(190px, 25.2vw, 484px);
+        border-radius: clamp(9px, 2.6vw, 50px);
+        overflow: hidden;
+
+        @media (max-width: 575px) {
+            height: 280px;
+        }
+    }
+
+    &__texts {
+        margin-top: clamp(20px, 2.6vw, 50px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: clamp(20px, 2.6vw, 50px);
+        color: $color_green;
+    }
+
+    &__text {
+        width: 65%;
+        margin: 0 auto;
+        text-indent: 18%;
+
+        @media (max-width: 991px) {
+            width: 75%;
+        }
+
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+
+        & p {
+            margin: 0;
+        }
+    }
+}

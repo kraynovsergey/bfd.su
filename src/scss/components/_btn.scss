@@ -1,0 +1,166 @@
+.btn-reset {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-weight: normal;
+    outline: none;
+}
+
+.btn-circle {
+    min-width: clamp(104px, 14.27vw, 274px);
+    max-width: clamp(104px, 14.27vw, 274px);
+    height: clamp(104px, 14.27vw, 274px);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $color_green;
+    color: $color_black;
+    font-size: 1rem;
+    letter-spacing: calc(clamp(1.12px, 0.12vw, 2.4px) * -1);
+    text-transform: uppercase;
+    text-decoration: none;
+    gap: clamp(5px, 1.04vw, 20px);
+    text-align: center;
+
+    & svg {
+        width: clamp(13px, 1.87vw, 36px);
+        height: auto;
+    }
+}
+
+.btn-custom {
+    overflow: hidden;
+    position: relative;
+
+    & svg {
+        z-index: 2;
+        transition: .5s ease-in-out color;
+    }
+    
+    &__text {
+        z-index: 2;
+        transition: .5s ease-in-out color;
+    }
+
+    &__bg {
+        @media (min-width: 992px) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            z-index: 1;
+            background: $color_black;
+            border-radius: 50%;
+    
+            &.explode-circle {
+                animation: explode-white-border-btn2 0.5s forwards;
+    
+                & + .btn-custom__text {
+                    color: $color_green;
+    
+                    & + svg {
+                        color: $color_green;
+                    }
+                }
+            }
+    
+            &.desplode-circle {
+                animation: desplode-white-border-btn2 0.5s forwards;
+            }
+        }
+    }
+
+    &._big {
+        & svg {
+            z-index: 2;
+            transition: 1.2s ease-in-out color;
+        }
+        
+        & .btn-custom__text {
+            z-index: 2;
+            transition: 1.2s ease-in-out color;
+        }
+
+        & .btn-custom__bg {
+            @media (min-width: 992px) {
+                &.explode-circle {
+                    animation: explode-white-border-btn2-big 1.2s forwards;
+                }
+        
+                &.desplode-circle {
+                    animation: desplode-white-border-btn2-big 1.2s forwards;
+                }
+            }
+        }
+    }
+}
+
+@keyframes explode-white-border-btn2 {
+    0% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        margin-top: -300px;
+    }
+}
+
+@keyframes desplode-white-border-btn2 {
+    0% {
+        width: 600px;
+        height: 600px;
+        margin-left: -300px;
+        margin-top: -300px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+@keyframes explode-white-border-btn2-big {
+    0% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    100% {
+        width: 3840px;
+        height: 3840px;
+        margin-left: -1920px;
+        margin-top: -1920px;
+    }
+}
+
+@keyframes desplode-white-border-btn2-big {
+    0% {
+        width: 3840px;
+        height: 3840px;
+        margin-left: -1920px;
+        margin-top: -1920px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+}

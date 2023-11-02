@@ -1,0 +1,70 @@
+extends base
+
+block meta
+    - var seotitle = 'Контакты'
+    - var seodescription = 'Описание страницы контактов'
+    - var seokeywords = 'Ключевые слова страницы контактов'
+
+block main
+    main.main._pb0        
+        .container
+            .contacts__cols
+                .contacts__col
+                    h1.contacts__h1.animation-lines 
+                        span(data-aos="lines") Контакты
+                    .contacts__socials(data-aos="opacity" data-aos-delay="200")
+                        a.contacts__social(href="#" target="_blank" rel="nofollow" data-magnetic)
+                            svg(width="41" height="41" data-magnetic-text)
+                                use(xlink:href="@img/icons/icons.svg#youtube")
+                        a.contacts__social(href="#" target="_blank" rel="nofollow" data-magnetic)
+                            svg(width="41" height="41" data-magnetic-text)
+                                use(xlink:href="@img/icons/icons.svg#vk")
+
+                .contacts__col
+                    .contacts__green(data-aos="opacity" data-aos-delay="200")
+                        a.contacts__email.animation-chars(href="mailto:")
+                            span.animation-chars__title(data-split-words-chars) info@bfd.su
+                            span.animation-chars__title(data-split-words-chars) info@bfd.su
+
+                        .contacts__messangers
+                            a.contacts__messanger.animation-chars(href="#" target="_blank")
+                                span.animation-chars__title(data-split-words-chars) Telegram
+                                span.animation-chars__title(data-split-words-chars) Telegram
+
+                            a.contacts__messanger.animation-chars(href="#" target="_blank")
+                                span.animation-chars__title(data-split-words-chars) WhatsApp
+                                span.animation-chars__title(data-split-words-chars) WhatsApp
+
+                    .contacts__addresses(data-aos="opacity" data-aos-delay="400")
+                        p.contacts__address ООО “БИГ ФИШ ГРУП”
+                        p.contacts__address г. Москва,Преображенская пл, д. 8
+                        a.contacts__address.animation-chars(href="tel:" target="_blank")
+                            span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+                            span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+
+        .contacts__map(id="map" data-aos="zoom-in" data-aos-delay="600")
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    script.
+        const map = document.querySelector('#map');
+        if (map) {
+            ymaps.ready(init);
+            function init() {
+                var myMap = new ymaps.Map("map", {
+                    center: [55.79488706895801,37.71281149999993],
+                    zoom: 15
+                });
+
+                let myGeoObject = new ymaps.Placemark([55.79488706895801,37.71281149999993], {}, {
+                    preset: 'islands#redIcon'
+                });
+
+                myMap.geoObjects.add(myGeoObject);
+
+                myMap.behaviors.disable('scrollZoom');
+                myMap.controls.remove('default');
+            }
+        }
+

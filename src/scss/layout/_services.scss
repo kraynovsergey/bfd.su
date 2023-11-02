@@ -1,0 +1,166 @@
+.services {
+    &__h1 {
+        margin-bottom: clamp(20px, 1.56vw, 30px) !important;
+    }
+
+    &__big-subtitle {
+        position: relative;
+        margin-bottom: clamp(20px, 2.6vw, 50px);
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(30px, 7.81vw, 150px);
+        letter-spacing: calc(clamp(2.4px, .62vw, 12px) * -1);
+        line-height: 90%;
+        padding-bottom: clamp(20px, 2.6vw, 50px);
+
+        & span {
+            color: $color_green;
+        }
+
+        &-line {
+            position: absolute;
+            height: 1px;
+            background: $color_green;
+            bottom: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        border-radius: clamp(20px, 2.6vw, 50px);
+        overflow: hidden;
+        position: relative;
+
+        &._active {
+            & .services__plus {
+                & span {
+                    &::after {
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+    }
+
+    &__header {
+        display: grid;
+        gap: clamp(10px, 1.56vw, 30px);
+        grid-template-columns: .325fr .635fr .05fr;
+        align-items: center;
+        text-align: left;
+        padding: clamp(10px, 2.08vw, 40px) clamp(20px, 2.08vw, 40px) clamp(10px, 2.08vw, 40px) 0;
+
+        @media (max-width: 575px) {
+            grid-template-columns: .3fr .65fr .05fr;
+        }
+    }
+
+    &__num {
+        & span {
+            font-size: clamp(80px, 15.41vw, 296px);
+            color: $color_green;
+            letter-spacing: calc(clamp(6.4px, 1.19vw, 23px) * -1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 62%;
+        }
+    }
+
+    &__title {
+        font-size: clamp(18px, 3.12vw, 60px);
+        letter-spacing: calc(clamp(1.44px, .25vw, 4.8px) * -1);
+        color: $color_white;
+        text-transform: uppercase;
+        line-height: 100%;
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+    }
+
+    &__plus {
+        display: flex;
+        justify-content: flex-end;
+
+        & span {
+            display: flex;
+            min-width: clamp(7px, 1.25vw, 24px);
+            max-width: clamp(7px, 1.25vw, 24px);
+            height: clamp(7px, 1.25vw, 24px);
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                width: 100%;
+                height: clamp(1px, .15vw, 3px);
+                background: $color_green;
+                position: absolute;
+                transition: .5s ease-in-out;
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__content-outer {
+        overflow: hidden;
+        height: 0;
+        transition: .5s ease-in-out;
+    }
+
+    &__content-wrap {
+        display: grid;
+        grid-template-columns: .325fr .635fr .05fr;
+        align-items: start;
+
+        @media (max-width: 575px) {
+            grid-template-columns: .3fr .65fr .05fr;
+        }
+    }
+
+    &__content {
+        max-width: clamp(394px, 30.83vw, 592px);
+        padding-bottom: clamp(10px, 2.08vw, 40px);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(15px, 2.08vw, 40px);
+        align-items: flex-start;
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        font-size: clamp(14px, 1.04vw, 20px);
+        margin: 0;
+        line-height: 110%;
+        letter-spacing: calc(clamp(.24px, .008vw, 1.6px) * -1);
+    }
+
+    &__price {
+        opacity: .4;
+        text-transform: uppercase;
+    }
+
+    &__more {
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: .5s ease-in-out opacity;
+
+        &:hover {
+            opacity: .2;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/* VENDORS */
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+@import "../../node_modules/aos/dist/aos.css";
+@import "../../node_modules/swiper/swiper.css";
+
+/* CORE */
+@import "core/_variables";
+@import "core/_fonts";
+@import "core/_default";
+@import "core/_grid";
+
+/* COMPONENTS */
+@import "components/_btn";
+@import "components/_link";
+@import "components/_picture";
+@import "components/_scroll";
+@import "components/_list";
+@import "components/_animation";
+@import "components/_fancybox";
+@import "components/_lenis";
+@import "components/_splittype";
+@import "components/_typography";
+@import "components/_rellax";
+@import "components/_cursor";
+@import "components/_swiper";
+@import "components/_line";
+
+/* LAYOUT */
+@import "layout/_preloader";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_section";
+@import "layout/_main";
+@import "layout/_home-intro";
+@import "layout/_home-about";
+@import "layout/_home-pluses";
+@import "layout/_home-cases";
+@import "layout/_technologies";
+@import "layout/_clients";
+@import "layout/_video";
+@import "layout/_order";
+@import "layout/_filter";
+@import "layout/_cases";
+@import "layout/_services";
+@import "layout/_contacts";
+@import "layout/_about";
+@import "layout/_team";
+@import "layout/_worker";
+@import "layout/_principle";
+@import "layout/_video-page";
+@import "layout/_case";
+@import "layout/_thankyou";

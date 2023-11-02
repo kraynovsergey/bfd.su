@@ -1,0 +1,30 @@
+footer.footer(class=no_animation)
+    .container.footer__container
+        button.footer__btn.btn-custom._big.btn-reset(type="button" data-fancybox data-src="#modal-order" data-magnetic)
+            span.btn-custom__bg
+            span.btn-custom__text(data-magnetic-text) Обсудить проект
+            svg(width="97" height="102" data-magnetic-text)
+                use(xlink:href="@img/icons/icons.svg#arrow-right")
+
+        svg.footer__logo(width="1820" height="360")
+            use(xlink:href="@img/icons/icons.svg#logo-text")
+
+        .footer__items
+            a.footer__item.footer__link.animation-chars(href="tel:") 
+                span.animation-chars__title(data-split-words-chars) ПОЗВОНИТЬ
+                span.animation-chars__title(data-split-words-chars) ПОЗВОНИТЬ
+            a.footer__item.footer__link.animation-chars(href="#" target="_blank") 
+                span.animation-chars__title(data-split-words-chars) VK
+                span.animation-chars__title(data-split-words-chars) VK
+            a.footer__item.footer__link.animation-chars(href="#" target="_blank") 
+                span.animation-chars__title(data-split-words-chars) Youtube
+                span.animation-chars__title(data-split-words-chars) Youtube
+            a.footer__item.footer__link.animation-chars(href="mailto:") 
+                span.animation-chars__title(data-split-words-chars) info@bfd.su
+                span.animation-chars__title(data-split-words-chars) info@bfd.su
+            a.footer__item.footer__link.animation-chars(href="tel:") 
+                span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+                span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+            .footer__item 107061, город Москва, Преображенская пл, д. 8
+
+.cursor(data-cursor)

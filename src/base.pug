@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = ''
+            - var seodescription = ''
+            - var seokeywords = ''
+        include pug/core/_meta
+
+    body.scroll._hidden
+        include pug/core/_mixin
+
+        //.line._left
+        //.line._right
+
+        include pug/layout/_preloader
+
+        include pug/layout/_header
+
+        block main
+
+        include pug/layout/_footer
+
+        include pug/layout/_order
+
+        block scripts
+
+        include pug/core/_scripts
+
+        

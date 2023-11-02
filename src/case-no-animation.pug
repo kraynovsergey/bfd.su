@@ -1,0 +1,88 @@
+extends base_no_animation
+
+block meta
+    - var seotitle = 'Кейс (меньше анимации)'
+    - var seodescription = 'Описание страницы кейса'
+    - var seokeywords = 'Ключевые слова страницы кейсы'
+
+block main
+    main.main._top
+        picture.case__intro.picture
+            source(type="image/webp" srcset="@img/tmp/case-intro@2x.webp 2x, @img/tmp/case-intro.webp 1x")
+            img(srcset="@img/tmp/case-intro@2x.jpg 2x, @img/tmp/case-intro.jpg 1x" alt="" width="1920" height="700" data-aos="zoom-out")
+
+        section.rellax._black(data-rellax-speed="2")
+            section.section._pt0._pb0
+                .container
+                    h1.case__h1.animation-lines
+                        span(data-aos="lines") Название кейса
+                            sup (сайт)
+
+        section.section._pt0
+            .container
+                .case__texts
+                    .case__text
+                        .case__subtitle.animation-lines
+                            p(data-aos="lines") Швейцарский бренд, производитель инновационных продуктов. бренд является лауреатом премии доверия потребителей «Народная марка № 1 в России», премии «Продукт года».
+                        .case__small.animation-lines
+                            p(data-aos="lines") Разработка сайта началась с анализа рынка и формирования портрета потребителя. Задача заключалась в том, чтобы показать продукцию Polaris как инновационную, технологичную, удобную и надежную. 
+                        a.case__link(href="#" target="_blank" rel="nofollow" data-magnetic)
+                            span(data-aos="opacity" data-magnetic-text) Смотреть сайт
+
+        section.section
+            .container
+                .case__gradient
+                    picture.case__gradient-picture.picture
+                        source(type="image/webp" srcset="@img/tmp/case-browser@2x.webp 2x, @img/tmp/case-browser.webp 1x")
+                        img(srcset="@img/tmp/case-browser@2x.png 2x, @img/tmp/case-browser.png 1x" alt="" width="990" height="645" data-aos="zoom-out")
+
+                .case__texts._mt50
+                    .case__text
+                        .case__default.animation-lines
+                            p(data-aos="lines") Проведена фотосессия продукции, ретушь и обработка изображений. Разработка графических элементов, подбор шрифтов, цветовое наполнение, инфографика, иконки, элементы навигации. В рамках дизайна было разработано более 30 макетов, адаптивные стили и вся вспомогательная навигация.
+
+        section.section
+            .case__pictures
+                picture.case__pictures-picture.picture
+                    source(type="image/webp" srcset="@img/tmp/case-mobile@2x.webp 2x, @img/tmp/case-mobile.webp 1x")
+                    img(srcset="@img/tmp/case-mobile@2x.jpg 2x, @img/tmp/case-mobile.jpg 1x" alt="" width="664" height="756" data-aos="fade-right")
+                picture.case__pictures-picture.picture
+                    source(type="image/webp" srcset="@img/tmp/case-desktop@2x.webp 2x, @img/tmp/case-desktop.webp 1x")
+                    img(srcset="@img/tmp/case-desktop@2x.jpg 2x, @img/tmp/case-desktop.jpg 1x" alt="" width="1255" height="756" data-aos="fade-left")
+
+            .container
+                .case__texts._mt50
+                    .case__text
+                        .case__default.animation-lines
+                            p(data-aos="lines") Проведена фотосессия продукции, ретушь и обработка изображений. Разработка графических элементов, подбор шрифтов, цветовое наполнение, инфографика, иконки, элементы навигации. В рамках дизайна было разработано более 30 макетов, адаптивные стили и вся вспомогательная навигация.
+
+        section.section
+            picture.case__picture.picture
+                source(type="image/webp" srcset="@img/tmp/case-big@2x.webp 2x, @img/tmp/case-big.webp 1x")
+                img(srcset="@img/tmp/case-big@2x.jpg 2x, @img/tmp/case-big.jpg 1x" alt="" width="1920" height="2086" data-aos="zoom-out")
+
+            .container
+                .case__texts._mt50
+                    .case__text
+                        .case__default.animation-lines
+                            p(data-aos="lines") После запуска нового корпоративного сайта, брэнд быстро завоевал популярность у потребителей и партнеров компании. Современный дизайн и продуманный интерфейс привели к быстрому росту посетителей, повышению лояльности, увеличению продаж и узнаваемости на рынке
+
+        section.section
+            picture.case__picture.picture
+                source(type="image/webp" srcset="@img/tmp/case-full@2x.webp 2x, @img/tmp/case-full.webp 1x")
+                img(srcset="@img/tmp/case-full@2x.jpg 2x, @img/tmp/case-full.jpg 1x" alt="" width="1920" height="2725" data-aos="zoom-out")
+
+            .container
+                .case__texts._mt50
+                    .case__text
+                        .case__default.animation-lines
+                            p(data-aos="lines") После запуска нового корпоративного сайта, брэнд быстро завоевал популярность у потребителей и партнеров компании. Современный дизайн и продуманный интерфейс привели к быстрому росту посетителей, повышению лояльности, увеличению продаж и узнаваемости на рынке
+                    .case__text
+                        .case__default.animation-lines
+                            p(data-aos="lines") После запуска нового корпоративного сайта, брэнд быстро завоевал популярность у потребителей и партнеров компании. Современный дизайн и продуманный интерфейс привели к быстрому росту посетителей, повышению лояльности, увеличению продаж и узнаваемости на рынке
+
+        section.section._pb0
+            .container
+                .cases
+                    +cases_item_no_animation('case-3', 'Бюро переводов', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#C7352C')
+

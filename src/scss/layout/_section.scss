@@ -1,0 +1,30 @@
+.section {
+    padding: clamp(30px, 5.2vw, 100px) 0;
+    overflow: hidden;
+
+    &._small {
+        padding: clamp(20px, 5.2vw, 75px) 0;
+    }
+
+    &._pt0 {
+        padding-top: 0 !important;
+    }
+
+    &._pb0 {
+        padding-bottom: 0 !important;
+    }
+
+    &__title {
+        text-align: center;
+        color: $color_green;
+        padding: 0;
+        text-transform: uppercase;
+        margin: 0 0 clamp(23px, 2.6vw, 50px);
+        font-size: clamp(20px, 2.6vw, 50px);
+        letter-spacing: calc(clamp(1.6px, 0.2vw, 4px) * -1);
+
+        & span {
+            display: block;
+        }
+    }
+}

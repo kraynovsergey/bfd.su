@@ -1,0 +1,38 @@
+.thankyou {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(80px, 7.20vw, 100px);
+        min-height: calc(100vh + 1px);
+        padding-top: clamp(50px, 5.2vw, 100px) !important;
+        padding-bottom: clamp(40px, 3.12vw, 60px) !important;
+    }
+
+    &__title {
+        font-size: clamp(24px, 5.2vw, 100px);
+        line-height: 90%;
+        letter-spacing: calc(clamp(1.92px, 0.42vw, 8px) * -1);
+        margin: 0;
+        color: $color_white;
+
+        & span {
+            color: $color_green;
+            display: block;
+        }
+    }
+
+    &__picture {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 575px) {
+            justify-content: center;
+        }
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+}

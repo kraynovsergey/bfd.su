@@ -1,0 +1,116 @@
+.filter {
+    margin: clamp(37px, 5.2vw, 100px) 0 clamp(20px, 2.6vw, 50px);
+    padding-bottom: clamp(20px, 2.6vw, 50px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 2.6vw, 50px);
+
+    &__fieldset {
+        display: grid;
+        align-items: start;
+        gap: clamp(10px, 1.56vw, 30px);
+        grid-template-columns: .325fr .635fr .05fr;
+
+        @media (max-width: 575px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__fieldset-title {
+        color: $color_green;
+        text-transform: uppercase;
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__fieldset-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(5px, 1.04vw, 20px);
+    }
+
+    &__radio {
+        & input {
+            display: none;
+
+            &:checked {
+                & + label {
+                    border-color: $color_green;
+                    color: $color_green;
+                }
+            }
+
+            &:disabled {
+                & + label {
+                    opacity: .2;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        & label {
+            height: clamp(23px, 2.7vw,52px);
+            display: flex;
+            align-items: center;
+            padding: 0 clamp(20px, 1.56vw, 30px);
+            border-radius: clamp(20px, 1.56vw, 30px);
+            cursor: pointer;
+            border: 1px solid $color_white;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: $color_white;
+            transition: .5s ease-in-out;
+            white-space: nowrap;
+        }
+    }
+
+    &__reset-wrap {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+
+    &__reset {
+        min-width: clamp(13px, 1.04vw, 20px);
+        max-width: clamp(13px, 1.04vw, 20px);
+        height: clamp(13px, 1.04vw, 20px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-45deg);
+        opacity: .2;
+        transition: .5s ease-in-out opacity;
+
+        &._active {
+            opacity: 1;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $color_green;
+            position: absolute;
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__line {
+        height: 1px;
+        background: $color_green;
+        position: absolute;
+        bottom: 0;
+    }
+}

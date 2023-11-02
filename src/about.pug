@@ -1,0 +1,62 @@
+extends base
+
+block meta
+    - var seotitle = 'О нас'
+    - var seodescription = 'Описание страницы о нас'
+    - var seokeywords = 'Ключевые слова страницы о нас'
+
+block main
+    main.main
+        section.section._pt0        
+            .container
+                h1.about__h1.animation-lines.letter-spacing
+                    span(data-aos="lines") О нас
+                .about__subtitle.animation-lines 
+                    p(data-aos="lines" data-aos-delay="200") В океане дизайна <span>с 2011 года</span>
+
+        section.section
+            .container
+                .team__header
+                    h2.section__title.team__title-block.animation-lines 
+                        span(data-aos="lines" data-aos-delay="400") Команда
+                    .swiper__navigations.team__navigations(data-aos="lines" data-aos-delay="600")
+                        button.swiper__navigation.btn-reset._prev(type="button" data-swiper-team-prev)
+                            svg(width="24" height="25")
+                                use(xlink:href="@img/icons/icons.svg#arrow-right")
+                        button.swiper__navigation.btn-reset(type="button" data-swiper-team-next)
+                            svg(width="24" height="25")
+                                use(xlink:href="@img/icons/icons.svg#arrow-right")
+
+                mixin worker(img, title, position)
+                    article.worker
+                        picture.worker__picture
+                            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                            img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+"1.jpg 1x" alt="" width="450" height="550" data-aos="zoom-out")
+                        h3.worker__title=title
+                        p.worker__position=position
+
+                .swiper.team__swiper(data-swiper-team)
+                    .swiper-wrapper
+                        .swiper-slide
+                            +worker('team-1', 'Андрей', 'The boss')
+                        .swiper-slide
+                            +worker('team-2', 'Юлия', 'Художник')
+                        .swiper-slide
+                            +worker('team-3', 'Александр', 'Дизайнер')
+                        .swiper-slide
+                            +worker('team-1', 'Андрей', 'The boss')
+                        .swiper-slide
+                            +worker('team-2', 'Юлия', 'Художник')
+                        .swiper-slide
+                            +worker('team-3', 'Александр', 'Дизайнер')
+
+        section.section
+            .container
+                h2.section__title.animation-lines.principles__title
+                    span(data-aos="lines") Принципы
+
+                .principles
+                    +principle('(01)', 'Технологичность и красота', 'Художники, дизайнеры и проектировщики создадут ваш замечательный сайт')
+                    +principle('(02)', 'Проекты любой сложности и функционала', 'Проекты любой сложности и функционала')
+                    +principle('(03)', 'Передовые технологи и программирования', 'Vue, React, Laravel, WordPress, MODX, Битрикс-1С и многое другое')
+                    

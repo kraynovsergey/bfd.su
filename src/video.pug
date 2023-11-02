@@ -1,0 +1,165 @@
+extends base
+
+block meta
+    - var seotitle = 'Видеоролики'
+    - var seodescription = 'Описание страницы видеороликов'
+    - var seokeywords = 'Ключевые слова страницы видеороликов'
+
+block main
+    main.main
+        section.section._small._pt0        
+            .container
+                h1.about__h1.animation-lines.letter-spacing
+                    span(data-aos="lines") Видео
+                .about__subtitle.animation-lines 
+                    p(data-aos="lines" data-aos-delay="200") Ролики нового формата интереснее <span>90% фильмов,</span> которые вы смотрели
+
+        section.section._small
+            .container
+                .video-page__item
+                    .video-page__virtual
+                    .video-page__content
+                        a.video-page__video(href="files/showreel.mp4" data-fancybox)
+                            picture(type="image/webp" srcset="@img/tmp/video-overlay-1@2x.webp 2x, @img/tmp/video-overlay-1.webp 1x")
+                                img(srcset="@img/tmp/video-overlay-1@2x.webp 2x, @img/tmp/video-overlay-1.webp 1x" width="1206" height="678" alt="" data-aos="zoom-out")
+                            svg.video-page__video-play(width="98" height="118" data-aos="opacity")
+                                use(xlink:href="@img/icons/icons.svg#play")
+                        
+                        .video-page__texts
+                            .video-page__text.animation-lines
+                                p(data-aos="lines") Трехминутный ролик о бизнесе, где в главной роли выступает собственник или высокопоставленный сотрудник компании. Важное отличие в том, что он не похож на рекламу, зрителю это нравится. 
+                            .video-page__text.animation-lines
+                                p(data-aos="lines") Мы удачно скрестили документальную суть и художественный подход, получив инструмент, эффективно выполняющий маркетинговые задачи.
+                        
+        section.section._small
+            .container
+                .video-page__item
+                    .video-page__title.section__title.animation-lines 
+                        span(data-aos="lines") Умеем работать с крупными клиентами
+
+                    .video-page__content
+                        .swiper.video-page__swiper(data-swiper-clients)
+                            .swiper-wrapper.video-page__clients
+                                .swiper-slide
+                                    .video-page__client(data-aos="zoom-in" data-aos-delay="100")
+                                        img(src="@img/tmp/big-client-1.svg" alt="")
+                                .swiper-slide
+                                    .video-page__client(data-aos="zoom-in" data-aos-delay="200")
+                                        img(src="@img/tmp/big-client-2.svg" alt="")
+                                .swiper-slide
+                                    .video-page__client(data-aos="zoom-in" data-aos-delay="300")
+                                        img(src="@img/tmp/big-client-3.svg" alt="")
+                                .swiper-slide
+                                    .video-page__client(data-aos="zoom-in" data-aos-delay="400")
+                                        img(src="@img/tmp/big-client-4.svg" alt="")
+                                .swiper-slide
+                                    .video-page__client(data-aos="zoom-in" data-aos-delay="500")
+                                        img(src="@img/tmp/big-client-5.svg" alt="")
+
+        section.section._small
+            .container
+                .video-page__item
+                    .video-page__title.section__title.animation-lines 
+                        span(data-aos="lines") Подтверждаем слова цифрами
+
+                    .video-page__content
+                        .swiper.video-page__swiper(data-swiper-numbers)
+                            .swiper-wrapper.video-page__clients
+                                .swiper-slide
+                                    .video-page__number(data-aos="zoom-in" data-aos-delay="100")
+                                        .video-page__number-title 200+
+                                        .video-page__number-text Снято роликов
+                                .swiper-slide
+                                    .video-page__number(data-aos="zoom-in" data-aos-delay="200")
+                                        .video-page__number-title 200+
+                                        .video-page__number-text Миллионов просмотров на YouTube
+                                .swiper-slide
+                                    .video-page__number(data-aos="zoom-in" data-aos-delay="300")
+                                        .video-page__number-title 10+
+                                        .video-page__number-text Лет в деле
+
+                        .video-page__texts
+                            .video-page__text.animation-lines
+                                p(data-aos="lines") Наши ролики <span>становятся трендами на YouTube.</span> Многократно просматриваются, пересылаются друзьям и добавляются в избранное.
+                            .video-page__text.animation-lines
+                                p(data-aos="lines") <span>Один из самых высоких рейтингов</span> просматриваемости среди коммерческого контента.
+
+        section.section._small
+            .container
+                .video-page__item
+                    .video-page__title.section__title.animation-lines 
+                        span(data-aos="lines") Эффект
+
+                    .video-page__content
+                        .video-page__texts
+                            .video-page__text.animation-lines
+                                p(data-aos="lines") Принцип работы роликов разрабатывался совместно с психологами, которые четко определили, что происходит в сознании зрителя на каждой секунде просмотра.
+                
+                .principles.video-page__principles
+                    +principle('(01)', 'СТОЙ!', 'Клиент замирает. Динамичный монтаж не отпускает его внимание, отключает внешние раздражители.')
+                    +principle('(02)', 'ЖЕЛАЙ!', 'Клиент вожделеет купить ваш продукт. Его завораживает видеоряд. Его внимание полностью принадлежит вам.')
+                    +principle('(03)', 'ДЕЙСТВУЙ!', 'Видеоряд мотивирует клиента немедленно купить вашу услугу. Абсолютный WOW-эффект.')
+
+        section.section._small
+            .container
+                .video-page__item
+                    .video-page__title.section__title.animation-lines 
+                        span(data-aos="lines") Типы видео
+
+                    .video-page__content
+                        .video-page__accordions
+                            .video-page__accordion(data-case-hover)
+                                .video-page__accordion-overlay(data-aos="left-right" data-aos-once="true")
+                                
+                                button.video-page__accordion-title.btn-reset.letter-spacing(type="button") Динамичные презентации
+                                    span
+                                
+                                .video-page__accordion-content-wrap(data-case-content)
+                                    .video-page__accordion-content(data-case-content-height)
+                                        a.video-page__video(href="files/showreel.mp4" data-fancybox)
+                                            picture(type="image/webp" srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x")
+                                                img(srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x" width="1206" height="678" alt="")
+                                            svg.video-page__video-play(width="98" height="118")
+                                                use(xlink:href="@img/icons/icons.svg#play")
+
+                            .video-page__accordion(data-case-hover)
+                                .video-page__accordion-overlay(data-aos="left-right" data-aos-once="true")
+                                
+                                button.video-page__accordion-title.btn-reset.letter-spacing(type="button") Ролик на закадровом голосе
+                                    span
+                                
+                                .video-page__accordion-content-wrap(data-case-content)
+                                    .video-page__accordion-content(data-case-content-height)
+                                        a.video-page__video(href="files/showreel.mp4" data-fancybox)
+                                            picture(type="image/webp" srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x")
+                                                img(srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x" width="1206" height="678" alt="")
+                                            svg.video-page__video-play(width="98" height="118")
+                                                use(xlink:href="@img/icons/icons.svg#play")
+
+                            .video-page__accordion(data-case-hover)
+                                .video-page__accordion-overlay(data-aos="left-right" data-aos-once="true")
+                                
+                                button.video-page__accordion-title.btn-reset.letter-spacing(type="button") Контентные ролики
+                                    span
+                                
+                                .video-page__accordion-content-wrap(data-case-content)
+                                    .video-page__accordion-content(data-case-content-height)
+                                        a.video-page__video(href="files/showreel.mp4" data-fancybox)
+                                            picture(type="image/webp" srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x")
+                                                img(srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x" width="1206" height="678" alt="")
+                                            svg.video-page__video-play(width="98" height="118")
+                                                use(xlink:href="@img/icons/icons.svg#play")
+
+                            .video-page__accordion(data-case-hover)
+                                .video-page__accordion-overlay(data-aos="left-right" data-aos-once="true")
+                                
+                                button.video-page__accordion-title.btn-reset.letter-spacing(type="button") Презентация на основе интервью
+                                    span
+                                
+                                .video-page__accordion-content-wrap(data-case-content)
+                                    .video-page__accordion-content(data-case-content-height)
+                                        a.video-page__video(href="files/showreel.mp4" data-fancybox)
+                                            picture(type="image/webp" srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x")
+                                                img(srcset="@img/tmp/video-overlay-2@2x.webp 2x, @img/tmp/video-overlay-2.webp 1x" width="1206" height="678" alt="")
+                                            svg.video-page__video-play(width="98" height="118")
+                                                use(xlink:href="@img/icons/icons.svg#play")

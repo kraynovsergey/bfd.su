@@ -1,0 +1,47 @@
+header.header
+    .container.header__container
+        a.header__logo(href="#")
+            svg(width="160" height="44")
+                use(xlink:href="@img/icons/icons.svg#logo")
+
+        a.header__link.header__showreel.animation-chars(href="files/showreel.mp4" data-fancybox)
+            span.animation-chars__title(data-split-words-chars) Showreel
+            span.animation-chars__title(data-split-words-chars) Showreel
+
+        div.header__navigation(id="header-navigation" data-lenis-prevent)
+            .header__navigation-wrap
+                nav.header__nav
+                    ul.header__list.list-reset
+                        li.header__listitem
+                            a.header__link.animation-chars(href="#")
+                                span.animation-chars__title(data-split-words-chars) О нас
+                                span.animation-chars__title(data-split-words-chars) О нас
+                        li.header__listitem
+                            a.header__link.animation-chars._active(href="#")
+                                span.animation-chars__title(data-split-words-chars) Портфолио
+                                span.animation-chars__title(data-split-words-chars) Портфолио
+                        li.header__listitem
+                            a.header__link.animation-chars(href="#")
+                                span.animation-chars__title(data-split-words-chars) Услуги
+                                span.animation-chars__title(data-split-words-chars) Услуги
+                        li.header__listitem
+                            a.header__link.animation-chars(href="#")
+                                span.animation-chars__title(data-split-words-chars) Контакты
+                                span.animation-chars__title(data-split-words-chars) Контакты
+                        li.header__listitem._mobile
+                            a.header__link.animation-chars(href="https://www.youtube.com/watch?v=q65LYD1L6RM" data-fancybox)
+                                span.animation-chars__title(data-split-words-chars) Showreel
+                                span.animation-chars__title(data-split-words-chars) Showreel
+
+                .header__navigation-btns
+                    button.header__navigation-btn.btn-circle.btn-reset(type="button" data-fancybox data-src="#modal-order") Обсудить<br>проект
+                        svg(width="36" height="35")
+                            use(xlink:href="@img/icons/icons.svg#btn-circle-arrow")
+
+                    a.header__navigation-btn.btn-circle(href="tel:") Позвонить<br>нам
+                        svg(width="36" height="35")
+                            use(xlink:href="@img/icons/icons.svg#btn-circle-arrow")
+
+                button.header__navigation-close.btn-reset(type="button" data-fancybox-close)
+
+        button.header__burger.btn-reset(type="button" data-fancybox data-src="#header-navigation")

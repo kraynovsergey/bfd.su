@@ -1,0 +1,40 @@
+.container.home-intro__container(data-100vh)
+    .home-intro__title.animation-lines
+        svg(width="925" height="219" data-aos="lines")
+            use(xlink:href="@img/icons/icons.svg#web-studio")
+
+    .home-intro__cols
+        .home-intro__leftcol
+            .home-intro__subtitle.animation-lines
+                svg(width="1160" height="219" data-aos="lines")
+                    use(xlink:href="@img/icons/icons.svg#digital-design")
+                svg._mobile(width="380" height="300" data-aos="lines")
+                    use(xlink:href="@img/icons/icons.svg#digital-design-mobile")
+
+            .home-intro__text.letter-spacing.animation-lines
+                p(data-aos="lines" data-aos-offset="0" data-aos-delay="400") Создаём корпоративные сайты, лендинги, интернет-магазины, crm-системы и приложения в web-среде
+
+            .home-intro__text.letter-spacing.home-intro__links._mobile.animation-lines
+                a.home-intro__link.animation-chars(href="mailto:" data-aos="lines" data-aos-offset="0" data-aos-delay="600")
+                    span.animation-chars__title(data-split-words-chars) info@bfd.su
+                    span.animation-chars__title(data-split-words-chars) info@bfd.su
+
+                a.home-intro__link.animation-chars(href="tel:" data-aos="lines" data-aos-offset="0" data-aos-delay="800")
+                    span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+                    span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+
+        .home-intro__rightcol
+            button.home-intro__btn.btn-circle.btn-custom.btn-reset(type="button" data-fancybox data-src="#modal-order" data-aos="opacity" data-aos-delay="1000" data-magnetic)
+                span.btn-custom__bg
+                span.btn-custom__text(data-magnetic-text) Обсудить<br>проект
+                svg(width="36" height="35" data-magnetic-text)
+                    use(xlink:href="@img/icons/icons.svg#btn-circle-arrow")
+
+            .home-intro__text.letter-spacing.home-intro__links.animation-lines
+                a.home-intro__link.animation-chars(href="mailto:" data-aos="lines" data-aos-offset="0" data-aos-delay="600")
+                    span.animation-chars__title(data-split-words-chars) info@bfd.su
+                    span.animation-chars__title(data-split-words-chars) info@bfd.su
+
+                a.home-intro__link.animation-chars(href="tel:" data-aos="lines" data-aos-offset="0" data-aos-delay="800")
+                    span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
+                    span.animation-chars__title(data-split-words-chars) +7 495 150-17-20

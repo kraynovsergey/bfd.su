@@ -1,0 +1,17 @@
+.line {
+    width: 1px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    background: $color_purple;
+    z-index: 2;
+    
+    &._left {
+        left: clamp(20px, 2.6vw, 50px);
+    }
+    
+    &._right {
+        right: clamp(20px, 2.6vw, 50px);
+    }
+}

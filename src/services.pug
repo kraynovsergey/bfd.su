@@ -1,0 +1,43 @@
+extends base
+
+block meta
+    - var seotitle = 'Услуги'
+    - var seodescription = 'Описание услуг'
+    - var seokeywords = 'Ключевые слова страницы услуг'
+
+block main
+    main.main
+        section.section._pt0
+            .container
+                h1.h1-big.services__h1.animation-lines
+                    span(data-aos="lines") Услуги
+                .services__big-subtitle.animation-lines
+                    p(data-aos="lines" data-aos-delay="100") По разработке программного обеспечения в <span>веб-среде</span>
+                    .services__big-subtitle-line(data-aos="left-right-full" data-aos-delay="200")
+
+                .services__items
+                    mixin services_item(num, title, background)
+                        article.services__item(style="background: "+background+";" data-case-hover data-aos="fade-up")
+                            button.services__header.btn-reset(type="button")
+                                .services__num
+                                    span= num
+                                h3.services__title= title
+                                .services__plus
+                                    span
+                            .services__content-outer(data-case-content)
+                                .services__content-wrap(data-case-content-height)
+                                    .services__content-num
+                                    .services__content
+                                        p.services__text Многостраничные сайты с современным авторским дизайном. Адаптированы под все типы устройств. Содержат презентационные материалы, документацию, блог и новостные материалы. Могут содержать разные формы захвата и интегрированы с внешними CRM системами. Отлично подходят для органического SEO-продвижения в поисковиках.
+                                        .services__price.letter-spacing от 190 000 рублей
+                                        a.services__more.services__text(href="#" data-magnetic) Смотреть
+                                    .services__content-plus
+
+                    +services_item('01', 'Корпоративный сайт', '#2C4EC7')
+                    +services_item('02', 'Интернет-магазин', '#CF45FF')
+                    +services_item('03', 'Продающий лендинг', '#7F39F0')
+                    +services_item('04', 'Веб-приложение', '#C7352C')
+                    +services_item('05', 'Видео ролики', '#33B175')
+
+
+

@@ -1,0 +1,38 @@
+.home-about {
+    &__title {
+        font-size: clamp(24px, 5.2vw, 100px);
+        letter-spacing: calc(clamp(1.92px, .41vw, 8px) * -1);
+        line-height: 90%;
+
+        & p {
+            margin: 0;
+        }
+
+        & span {
+            color: $color_green;
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        width: 33.33%;
+        margin: clamp(20px, 3.12vw, 60px) auto 0;
+
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        & span {
+            color: $color_gray;
+        }
+
+        & strong {
+            color: $color_green;
+            font-weight: normal;
+        }
+    }
+}

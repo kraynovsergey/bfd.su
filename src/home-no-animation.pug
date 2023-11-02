@@ -1,0 +1,108 @@
+extends base_no_animation
+
+block meta
+    - var seotitle = 'Главная страница (меньше анимации)'
+    - var seodescription = 'Описание главной страницы'
+    - var seokeywords = 'Ключевые слова главной страницы'
+
+block main
+    main.main._top
+        block intro
+            section.home-intro.data-ripples(data-ripples-img="@img/tmp/home-intro-empty.png" data-scroll-opacity)
+                video.home-intro__video(autoplay muted loop playsinline)
+                    source(type="video/mp4" src="files/home-page-video.mp4")
+            
+                include pug/layout/_home-intro
+
+        block rellax
+            section.rellax._black(data-rellax-speed="2")
+                section.section.home-about._pb0
+                    include pug/layout/_home-about
+        
+        block pluses
+            - var pluses_classes = '_pt0'
+            
+        section.section.home-pluses(class=pluses_classes)
+            .container.home-pluses__container
+                article.home-pluses__item
+                    h3.home-pluses__title.letter-spacing.animation-lines
+                        span(data-aos="lines") Сильный маркетинг
+                    p.home-pluses__text.letter-spacing.animation-lines
+                        span(data-aos="lines") Проводим исследование рынка, точно и эффективно формулдируем и презентуем преимущества компании.
+
+                article.home-pluses__item
+                    h3.home-pluses__title.letter-spacing.animation-lines
+                        span(data-aos="lines" data-aos-delay="100") Эффективность
+                    p.home-pluses__text.letter-spacing.animation-lines 
+                        span(data-aos="lines" data-aos-delay="100") Делаем адаптивную под все типы устройств верстку, интерактивную анимацию. Добавляем удобную панель управления сайтом. Создаем сильный инструмент продаж. Ваша компания увеличивает обороты и прибыль.
+
+                article.home-pluses__item
+                    h3.home-pluses__title.letter-spacing.animation-lines 
+                        span(data-aos="lines" data-aos-delay="200") Стильный дизайн
+                    p.home-pluses__text.letter-spacing.animation-lines 
+                        span(data-aos="lines" data-aos-delay="200") Разрабатываем интересный, современный, креативный, эксклюзивный дизайн, основываясь на трендах, предпочтениях заказчика и здравом смысле.
+
+        section.section.home-cases
+            .container
+                h2.section__title.animation-lines 
+                    span(data-aos="lines") Кейсы
+                .home-cases__items
+                    mixin home_case_item(title, category, year, delay)
+                        .home-cases__item(data-case)
+                            .home-cases__overlay(data-aos="left-right" data-aos-delay=delay)
+                            button.home-cases__header.btn-reset(type="button")
+                                span.home-cases__header-title.home-cases__header-text.letter-spacing=title
+                                span.home-cases__header-text.home-cases__header-category.letter-spacing=category
+                                span.home-cases__header-text.home-cases__header-year.letter-spacing=year
+
+                            .home-cases__content-wrap(data-case-content)
+                                .home-cases__content(data-case-content-height)
+                                    .home-cases__text
+                                        p Производство бытовой техники мирового уровня. бренд является лауреатом премии доверия потребителей "народная марка №1 России".
+                                        a.home-cases__more(href="#" data-magnetic)
+                                            span подробнее
+                                            svg(width="16" height="15" data-magnetic-text)
+                                                use(xlink:href="img/icons/icons.svg#btn-circle-arrow")
+
+                                    picture.home-cases__picture
+                                        source(type="image/webp" srcset="@img/tmp/home-case@2x.webp 2x, @img/tmp/home-case.webp 1x")
+                                        img(srcset="@img/tmp/home-case@2x.png 2x, @img/tmp/home-case.png 1x" alt="" width="592" height="592")
+
+                    +home_case_item('POLARIS', 'Корпоративный сайт, интернет - магазин', '(2023)', 0)
+                    +home_case_item('KENIGO', 'Корпоративный сайт, брендинг', '(2023)', 25)
+                    +home_case_item('LOKOTRACK', 'Корпоративный сайт', '(2023)', 50)
+                    +home_case_item('POLARIS', 'Интернет - магазин', '(2023)', 75)
+                    +home_case_item('PILKINGTON', 'Корпоративный сайт, брендинг', '(2023)', 100)
+                    +home_case_item('KENIGO', 'Корпоративный сайт', '(2023)', 125)
+                    +home_case_item('LOKOTRACK', 'Корпоративный сайт, брендинг', '(2023)', 150)
+
+                .home-cases__all(data-aos="lines")
+                    a.letter-spacing(href="#" data-magnetic) 
+                        span(data-magnetic-text) Смотреть ещё
+
+        section.section.technologies
+            .container
+                h2.section__title.animation-lines 
+                    span(data-aos="lines") Технологии
+
+                .technologies__wrap(data-matter data-aos="opacity" data-matter-path="img/") 
+
+                .technologies__texts
+                    .technologies__text.letter-spacing.animation-lines 
+                        p(data-aos="lines") Мы работаем со всеми популярными технологиями программиования. Если вашего запроса нет в списке, то пожалуйста свяжитесь с менеджером для уточнения.
+                    .technologies__text.letter-spacing.animation-lines 
+                        p(data-aos="lines") Опыт наших программистов позволяет создавать и поддерживать сайты на актуальных платформах и воплощать самые креативные идеи.
+
+        section.section.clients
+            .clients__title.marquee(data-aos="fade-up" data-duration="15000" data-direction="right")
+                span Клиенты
+
+            div.clear
+
+            .clients__logos.marquee(data-aos="fade-up" data-duration="10000" data-direction="left")
+                img(src="@img/tmp/client-1.svg" width="210" height="40" alt="")
+                img(src="@img/tmp/client-2.svg" width="210" height="40" alt="")
+                img(src="@img/tmp/client-3.svg" width="210" height="40" alt="")
+                img(src="@img/tmp/client-4.svg" width="210" height="40" alt="")
+
+            div.clear

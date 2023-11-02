@@ -1,0 +1,77 @@
+.order(id="modal-order" data-lenis-prevent)
+    form.container.order__form(action="#")
+        p.order__title Опишите <br>ваш проект
+        .order__fields
+            input.order__input._error(type="text" name="name" placeholder="Имя*")
+
+            input.order__input(type="tel" name="phone" placeholder="Телефон*")
+            
+            input.order__input(type="email" name="email" placeholder="E-mail*")
+            
+            input.order__input(type="text" name="company" placeholder="Компания")
+
+            .order__textarea-wrap.order__radio-wrap
+                button.order__radio-value.btn-reset(type="button" data-budget) Планируемый бюджет
+                .order__radio-items
+                    .order__radio-item
+                        input(type="radio" name="budget" value="до 300 000р." id="order-budget-1" data-budget-input)
+                        label(for="order-budget-1")
+                            span
+                            | до 300 000р.
+                    .order__radio-item
+                        input(type="radio" name="budget" value="300 000 - 500 000р." id="order-budget-2" data-budget-input)
+                        label(for="order-budget-2")
+                            span
+                            | 300 000 - 500 000р.
+                    .order__radio-item
+                        input(type="radio" name="budget" value="500 000 - 800 000р." id="order-budget-3" data-budget-input)
+                        label(for="order-budget-3")
+                            span
+                            | 500 000 - 800 000р.
+                    .order__radio-item
+                        input(type="radio" name="budget" value="800 000 - 1 500 000р." id="order-budget-4" data-budget-input)
+                        label(for="order-budget-4")
+                            span
+                            | 800 000 - 1 500 000р.
+                    .order__radio-item
+                        input(type="radio" name="budget" value="больше 1 500 000р." id="order-budget-5" data-budget-input)
+                        label(for="order-budget-5")
+                            span
+                            | больше 1 500 000р.
+
+            .order__textarea-wrap
+                textarea.order__textarea(name="message" placeholder="Описание проекта*")
+                .order__file
+                    input(type="file" name="attachment" id="order-file" data-file-name)
+                    label(for="order-file") 
+                        svg(width="18" height="18")
+                            use(xlink:href="@img/icons/icons.svg#file")
+                        span Загрузить файл
+
+            .order__checkbox
+                input.order__checkbox-input(type="checkbox" name="tinkoff" id="order-tinkoff")
+                label.order__checkbox-label(for="order-tinkoff") 
+                    span.order__checkbox-check
+                    span Беспроцентная рассрочка от банка Тинькофф
+
+            .order__checkbox
+                input.order__checkbox-input(type="checkbox" name="policy" id="order-policy" data-policy checked)
+                label.order__checkbox-label(for="order-policy") 
+                    span.order__checkbox-check
+                    span Я согласен с <a href="#" target="_blank">политикой конфеденциальности</a>
+
+        button.footer__btn.order__btn.btn-custom._big.btn-reset(type="submit" data-magnetic)
+            span.btn-custom__bg
+            span.btn-custom__text(data-magnetic-text) Отправить заявку
+            svg(width="97" height="102" data-magnetic-text)
+                use(xlink:href="@img/icons/icons.svg#arrow-right")
+
+.order(id="modal-thankyou" data-lenis-prevent)
+    .container.thankyou__container
+        p.thankyou__title <span>Ваша заявка принята.</span> Мы свяжемся<br> с вами в ближайшее время.
+        picture.thankyou__picture
+            source(type="image/webp" srcset="@img/thankyou@2x.webp 2x, @img/thankyou.webp 1x")
+            img(srcset="@img/thankyou@2x.png 2x, @img/thankyou.png 1x" alt="" width="429" height="429")
+
+
+

@@ -1,0 +1,48 @@
+.home-pluses {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(13px, 1.04vw, 20px);
+
+        @media (max-width: 575px) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: clamp(10px, 2.6vw, 50px);
+
+        @media (max-width: 575px) {
+            width: 58%;
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-weight: normal;
+        color: $color_gray;
+        font-size: clamp(14px, 1.56vw, 30px);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $color_green;
+    }
+
+    &__title,
+    &__text {
+        line-height: 90%;
+        margin: 0;
+        padding: 0;
+
+        & span {
+            display: block;
+        }
+    }
+}

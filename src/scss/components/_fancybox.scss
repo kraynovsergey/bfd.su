@@ -1,0 +1,29 @@
+.fancybox {
+    &__backdrop {
+        background: rgba(0, 0, 0, 0.70);
+        opacity: 1;
+    }
+
+    &__slide {
+        padding: 0;
+
+        & .is-close-btn {
+            opacity: 1 !important;
+
+            & svg {
+                fill: $color_green;
+                stroke: $color_green;
+            }
+        }
+    }
+
+    &__container {
+        &:not(.is-compact) {
+            & .fancybox__slide {
+                &.has-close-btn {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
