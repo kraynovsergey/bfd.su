@@ -12,7 +12,7 @@
         <span class="home-cases__header-text home-cases__header-year letter-spacing">({$year})</span>
     </button>
 
-    <div class="home-cases__content-wrap" {$idx == 1 ? 'style="height: auto;"' : ''} data-case-content>
+    <div class="home-cases__content-wrap" data-case-content>
         <div class="home-cases__content" data-case-content-height>
             <div class="home-cases__text">
                 <p>{$intro_home}</p>

@@ -272,6 +272,10 @@ const cases = document.querySelectorAll('[data-case]');
 if (cases.length > 0) {
     window.addEventListener('load', () => {
         cases.forEach(item => {
+            if (item.classList.contains('_active')) {
+                item.querySelector('[data-case-content]').style.height = item.querySelector('[data-case-content-height]').offsetHeight + 'px';
+            }
+
             item.addEventListener('click', () => {
                 cases_func(item, cases);    
             });

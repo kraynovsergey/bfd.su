@@ -69,7 +69,7 @@
         </section>
 
         <section class="rellax _black" data-rellax-speed="2">
-            <section class="section home-about _pb0">
+            <section class="section home-about">
                 <div class="container">
                     {if $_modx->resource.about_title}
                         <div class="home-about__title animation-lines">
@@ -88,7 +88,7 @@
         
         {set $pluses = json_decode($_modx->resource.pluses, true)}
         {if $pluses | length > 0}
-            <section class="section home-pluses _pt0">
+            <section class="section home-pluses">
                 <div class="container home-pluses__container">
                     {foreach $pluses as $row}
                         <article class="home-pluses__item">
