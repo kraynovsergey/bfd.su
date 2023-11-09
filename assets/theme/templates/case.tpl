@@ -63,7 +63,7 @@
 
         <section class="section">
             <div class="container">
-                <div class="case__gradient {if $_modx->resource.first_section_gradient == 1}_gradient{/if}" {if $_modx->resource.first_section_gradient == 1}style="background: linear-gradient({$_modx->resource.first_section_gradient_direction}, {$_modx->resource.first_section_gradient1}, {$_modx->resource.first_section_gradient2}, {$_modx->resource.first_section_gradient3});"{/if}>
+                <div class="case__gradient {if $_modx->resource.first_section_gradient == 1}_gradient{/if}" {if $_modx->resource.first_section_gradient == 1}style="background: linear-gradient({$_modx->resource.first_section_gradient_direction}, {$_modx->resource.first_section_gradient1}, {$_modx->resource.first_section_gradient2 ? $_modx->resource.first_section_gradient2+', ' : ''}{$_modx->resource.first_section_gradient3});"{/if}>
                     {if $_modx->resource.first_section_image}
                         {if $_modx->resource.first_section_gradient == 1}
                             {set $first_section_image = 'pThumb' | snippet : [
@@ -147,12 +147,12 @@
                 {if $_modx->resource.second_section_image1}
                     {set $second_section_image1 = 'pThumb' | snippet : [
                         'input' => $_modx->resource.second_section_image1,
-                        'options' => 'w=664&zc=0&q=90&f=jpg'
+                        'options' => 'w=664&zc=0&q=90'
                     ]}
 
                     {set $second_section_image1_2x = 'pThumb' | snippet : [
                         'input' => $_modx->resource.second_section_image1,
-                        'options' => 'w=1328&zc=0&q=90&f=jpg'
+                        'options' => 'w=1328&zc=0&q=90'
                     ]}
 
                     {set $second_section_image1_webp = 'pThumb' | snippet : [
@@ -180,12 +180,12 @@
                 {if $_modx->resource.second_section_image2}
                     {set $second_section_image2 = 'pThumb' | snippet : [
                         'input' => $_modx->resource.second_section_image2,
-                        'options' => 'w=1255&zc=0&q=90&f=jpg'
+                        'options' => 'w=1255&zc=0&q=90'
                     ]}
 
                     {set $second_section_image2_2x = 'pThumb' | snippet : [
                         'input' => $_modx->resource.second_section_image2,
-                        'options' => 'w=2510&zc=0&q=90&f=jpg'
+                        'options' => 'w=2510&zc=0&q=90'
                     ]}
 
                     {set $second_section_image2_webp = 'pThumb' | snippet : [
