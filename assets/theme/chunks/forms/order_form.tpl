@@ -64,7 +64,7 @@
             <input class="order__checkbox-input" type="checkbox" name="policy" id="order-policy" data-policy checked>
             <label class="order__checkbox-label" for="order-policy">
                 <span class="order__checkbox-check"></span>
-                <span>Я согласен с <a href="{'privacy_policy' | config}" target="_blank">политикой конфеденциальности</a></span>
+                <span>Я согласен с <a href="{'privacy_policy' | config}" target="_blank">политикой конфиденциальности</a></span>
             </label>
         </div>
     </div>
