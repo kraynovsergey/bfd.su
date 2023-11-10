@@ -45,7 +45,7 @@
                 <div class="cases__param-value">
                     {set $type_project_array = $.php.explode('||', $type_project)}
                     {foreach $type_project_array as $row}
-                        {if $row@index == 0}({/if}{if $row@index > 0}, {/if}{$row}{if ($row@index + 1) == $industry_array | length}){/if}
+                        {if $row@index == 0}({/if}{if $row@index > 0}, {/if}{$row}{if ($row@index + 1) == $type_project_array | length}){/if}
                     {/foreach}
                 </div>
             </div>
