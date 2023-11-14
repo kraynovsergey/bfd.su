@@ -63,7 +63,7 @@
 
         <section class="section">
             <div class="container">
-                <div class="case__gradient {if $_modx->resource.first_section_gradient == 1}_gradient{/if}" {if $_modx->resource.first_section_gradient == 1}style="background: linear-gradient({$_modx->resource.first_section_gradient_direction}, {$_modx->resource.first_section_gradient1}, {$_modx->resource.first_section_gradient2 ? $_modx->resource.first_section_gradient2+', ' : ''}{$_modx->resource.first_section_gradient3});"{/if}>
+                <div class="case__gradient {if $_modx->resource.first_section_gradient == 1}_gradient{/if}" {if $_modx->resource.first_section_gradient == 1}style="background: linear-gradient({$_modx->resource.first_section_gradient_direction}, {$_modx->resource.first_section_gradient1}, {$_modx->resource.first_section_gradient2 ? $_modx->resource.first_section_gradient2~', ' : ''}{$_modx->resource.first_section_gradient3});"{/if}>
                     {if $_modx->resource.first_section_image}
                         {if $_modx->resource.first_section_gradient == 1}
                             {set $first_section_image = 'pThumb' | snippet : [
