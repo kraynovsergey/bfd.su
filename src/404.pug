@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = 'Страница не найдена'
+            - var seodescription = ''
+            - var seokeywords = ''
+        include pug/core/_meta
+
+    body.scroll._hidden
+        include pug/core/_mixin
+
+        .not-found
+            .not-found__container
+                picture.not-found__picture
+                    source(type="image/webp" srcset="@img/not-found@2x.webp 2x, @img/not-found.webp 1x")
+                    img(srcset="@img/not-found@2x.png 2x, @img/not-found.png 1x" alt="" width="721" height="574")
+                h1.not-found__title Страница не найдена
+                a.not-found__link(href="#" data-magnetic) 
+                    span(data-magnetic-text) На главную
+
+            svg.not-found__logo(width="301" height="83")
+                use(xlink:href="@img/icons/icons.svg#logo")
+
+        include pug/core/_scripts
+
+        
