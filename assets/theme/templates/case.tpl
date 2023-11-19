@@ -318,7 +318,7 @@
 
                 <picture class="case__picture picture">
                     <source type="image/webp" srcset="{$fourth_section_image_webp_2x} 2x, {$fourth_section_image_webp} 1x">
-                    <img srcset="{$fourth_section_image_2x} 2x, {$fourth_section_image} 1x" alt="{$_modx->resource.pagetitle | escape}" width="1920" height="2086" data-aos="opacity" loading="lazy">
+                    <img srcset="{$fourth_section_image_2x} 2x, {$fourth_section_image} 1x" alt="{$_modx->resource.pagetitle | escape}" width="1920" height="2086" data-aos="opacity">
                 </picture>
             {else}
                 {if $_modx->resource.fourth_section_video}
