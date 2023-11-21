@@ -2,10 +2,21 @@
 
 {block 'main'}
     <main class="main _top">
-        <section class="home-intro data-ripples" data-ripples-img="assets/theme/img/home-intro-empty.png" data-scroll-opacity>
-            <video class="home-intro__video" autoplay muted loop playsinline>
-                <source type="video/mp4" src="{$_modx->resource.intro_video}">
-            </video>
+        {if $_modx->resource.intro_image}
+            {set $intro_image = 'pThumb' | snippet : [
+                'input' => $_modx->resource.intro_image,
+                'options' => 'w=1920&h=1080&zc=1&q=90&f=jpg'
+            ]}
+        {else}
+            {set $intro_image = 'assets/theme/img/home-intro-empty.png'}
+        {/if}
+
+        <section class="home-intro data-ripples" data-ripples-img="{$intro_image}" data-scroll-opacity>
+            {if $_modx->resource.intro_video}
+                <video class="home-intro__video" autoplay muted loop playsinline>
+                    <source type="video/mp4" src="{$_modx->resource.intro_video}">
+                </video>
+            {/if}
 
             <div class="container home-intro__container" data-100vh>
                 <div class="home-intro__title animation-lines">
@@ -69,6 +80,14 @@
         </section>
 
         <section class="rellax _black" data-rellax-speed="2">
+            {if $_modx->resource.video}
+                <section class="section _pt0">
+                    <video class="video" autoplay muted loop playsinline>
+                        <source type="video/mp4" src="{$_modx->resource.video}">
+                    </video>
+                </section>
+            {/if}
+
             <section class="section home-about">
                 <div class="container">
                     {if $_modx->resource.about_title}
