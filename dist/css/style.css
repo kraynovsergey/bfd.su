@@ -1333,6 +1333,10 @@ body .h1-big span {
   height: auto;
 }
 
+.home-cases__video {
+  width: 100%;
+}
+
 .home-cases__text {
   display: grid;
   grid-template-columns: 0.67fr auto;

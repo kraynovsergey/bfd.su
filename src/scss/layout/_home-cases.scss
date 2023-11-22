@@ -102,6 +102,10 @@
         }
     }
 
+    &__video {
+        width: 100%;
+    }
+
     &__text {
         display: grid;
         grid-template-columns: .67fr auto;

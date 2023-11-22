@@ -106,7 +106,7 @@
         </section>
         
         {set $pluses = json_decode($_modx->resource.pluses, true)}
-        {if $pluses | length > 0}
+        {if $pluses | length > 0 and $_modx->resource.pluses_show == 1}
             <section class="section home-pluses">
                 <div class="container home-pluses__container">
                     {foreach $pluses as $row}
@@ -136,7 +136,7 @@
                         'limit' => 0,
                         'tpl' => '@FILE chunks/portfolio/portfolio_home_item.tpl',
                         'includeContent' => 0,
-                        'includeTVs' => 'show_on_home,year,type_project,image_home,intro_home',
+                        'includeTVs' => 'show_on_home,year,type_project,image_home,intro_home,video_home',
                         'tvPrefix' => '',
                         'tvFilters' => 'show_on_home===1'
                     ]}
