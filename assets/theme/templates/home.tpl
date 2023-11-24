@@ -151,19 +151,23 @@
 
         <section class="section technologies">
             <div class="container">
-                <h2 class="section__title animation-lines"><span data-aos="lines">Технологии</span></h2>
-                <div class="technologies__wrap" data-matter data-aos="opacity" data-matter-path="/assets/theme/img/"></div>
+                {*<h2 class="section__title animation-lines"><span data-aos="lines">Технологии</span></h2>*}
+                <h2 class="section__title animation-lines">Технологии</h2>
+                {*<div class="technologies__wrap" data-matter data-aos="opacity" data-matter-path="/assets/theme/img/"></div>*}
+                <div class="technologies__wrap" data-matter data-matter-path="/assets/theme/img/"></div>
                 
                 <div class="technologies__texts">
                     {if $_modx->resource.technologies_text}
                         <div class="technologies__text letter-spacing animation-lines"> 
-                            <p data-aos="lines">{$_modx->resource.technologies_text}</p>
+                            {*<p data-aos="lines">{$_modx->resource.technologies_text}</p>*}
+                            {$_modx->resource.technologies_text}
                         </div>
                     {/if}
                     
                     {if $_modx->resource.technologies_text2}
                         <div class="technologies__text letter-spacing animation-lines"> 
-                            <p data-aos="lines">{$_modx->resource.technologies_text2}</p>
+                            {*<p data-aos="lines">{$_modx->resource.technologies_text2}</p>*}
+                            {$_modx->resource.technologies_text2}
                         </div>
                     {/if}
                 </div>
@@ -171,9 +175,11 @@
         </section>
 
         <section class="section clients">
-            <div class="clients__title marquee" data-aos="opacity" data-duration="15000" data-direction="right"><span>Клиенты</span></div>
+            {*<div class="clients__title marquee" data-aos="opacity" data-duration="15000" data-direction="right"><span>Клиенты</span></div>*}
+            <div class="clients__title marquee" data-duration="15000" data-direction="right"><span>Клиенты</span></div>
             <div class="clear"></div>
-            <div class="clients__logos marquee" data-aos="opacity" data-duration="10000" data-direction="left">
+            {*<div class="clients__logos marquee" data-aos="opacity" data-duration="10000" data-direction="left">*}
+            <div class="clients__logos marquee" data-duration="10000" data-direction="left">
                 {set $clients = json_decode($_modx->resource.clients, true)}
                 {foreach $clients as $row}
                     {set $image = 'assets/images/' ~ $row.image}
