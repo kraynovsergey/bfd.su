@@ -17,7 +17,12 @@
                 {/if}
                 
                 {if $hidemenu != 1}
-                    <a class="services__more services__text" href="{$id | url}" data-magnetic>Смотреть</a>
+                    <a class="services__more services__text home-cases__more" href="{$id | url}" {$link_attributes} data-magnetic>
+                        <span>Смотреть</span>
+                        <svg width="16" height="15" data-magnetic-text>
+                            <use xlink:href="assets/theme/img/icons/icons.svg#btn-circle-arrow"></use>
+                        </svg>
+                    </a>
                 {/if}
             </div>
             <div class="services__content-plus"></div>

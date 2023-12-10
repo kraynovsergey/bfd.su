@@ -1367,7 +1367,7 @@ body .h1-big span {
   text-decoration: underline;
 }
 
-.home-cases__more:hover {
+.home-cases__more:hover:is(:not(.services__more)) {
   color: rgba(156, 254, 0, 0.2);
 }
 

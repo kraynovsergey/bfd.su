@@ -146,7 +146,9 @@
         }
 
         &:hover {
-            color: $color_green_hover;
+            &:is(:not(.services__more)) {
+                color: $color_green_hover;
+            }
         }
     }
 

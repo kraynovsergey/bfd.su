@@ -80,7 +80,8 @@
         </section>
 
         <section class="rellax _black" data-rellax-speed="2">
-            {if $_modx->resource.video}
+            {set $mobile_detect = $_modx->runSnippet('@FILE:snippets/mobile_detect.php')}
+            {if $_modx->resource.video and $mobile_detect == '0'}
                 <section class="section _pt0">
                     <video class="video" autoplay muted loop playsinline>
                         <source type="video/mp4" src="{$_modx->resource.video}">
@@ -128,7 +129,7 @@
             <div class="container">
                 <h2 class="section__title animation-lines"><span data-aos="lines">Кейсы</span></h2>
                 <div class="home-cases__items">
-                    {'pdoResources' | snippet : [
+                    {'!pdoResources' | snippet : [
                         'parents'  => 30,
                         'depth' => 0,
                         'sortby' => 'menuindex',
