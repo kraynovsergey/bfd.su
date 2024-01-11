@@ -4,7 +4,7 @@
     {include 'file:chunks/meta.tpl'}
 </head>
 <body class="scroll _hidden">
-    <section class="preloader" data-preloader>
+    <div class="preloader" data-preloader>
         <div class="preloader__progress"></div>
         <div class="container">
             <div class="preloader__percent" data-preloader-percent>0</div>
@@ -12,7 +12,7 @@
                 <use xlink:href="assets/theme/img/icons/icons.svg#logo"></use>
             </svg>
         </div>
-    </section>
+    </div>
 
     {include 'file:chunks/header.tpl'}
 

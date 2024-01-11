@@ -11,7 +11,7 @@
             </div>
         </section>
 
-        <section class="section _small">
+        <div class="section _small">
             <div class="container">
                 <div class="video-page__item">
                     <div class="video-page__virtual"></div>
@@ -41,7 +41,7 @@
                                 
                                 <picture>
                                     <source type="image/webp" srcset="{$intro_image_webp_2x} 2x, {$intro_image_webp} 1x">
-                                    <img srcset="{$intro_image_2x} 2x, {$intro_image} 1x" width="1206" height="678" alt="{$_modx->resource.pagetitle | escape}" data-aos="zoom-out">
+                                    <img src="{$intro_image}" srcset="{$intro_image_2x} 2x, {$intro_image} 1x" width="1206" height="678" alt="{$_modx->resource.pagetitle | escape}" data-aos="zoom-out">
                                 </picture>
 
                                 <svg class="video-page__video-play" width="98" height="118" data-aos="opacity">
@@ -66,11 +66,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         {set $big_clients = json_decode($_modx->resource.big_clients, true)}
         {if $big_clients | length > 0}
-            <section class="section _small">
+            <div class="section _small">
                 <div class="container">
                     <div class="video-page__item">
                         {if $_modx->resource.big_clients_title}
@@ -95,12 +95,12 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         {/if}
 
         {set $numbers = json_decode($_modx->resource.numbers, true)}
         {if $numbers | length > 0}
-            <section class="section _small">
+            <div class="section _small">
                 <div class="container">
                     <div class="video-page__item">
                         {if $_modx->resource.numbers_title}
@@ -139,10 +139,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         {/if}
 
-        <section class="section _small">
+        <div class="section _small">
             <div class="container">
                 <div class="video-page__item">
                     {if $_modx->resource.effect_title}
@@ -176,11 +176,11 @@
                     </div>
                 {/if}
             </div>
-        </section>
+        </div>
 
         {set $types_video = json_decode($_modx->resource.types_video, true)}
         {if $types_video | length > 0}
-            <section class="section _small">
+            <div class="section _small">
                 <div class="container">
                     <div class="video-page__item">
                         {if $_modx->resource.types_video_title}
@@ -224,7 +224,7 @@
                                                 <a class="video-page__video" href="{if $row.video}{$video}{else}{$row.youtube}{/if}" data-fancybox>
                                                     <picture>
                                                         <source type="image/webp" srcset="{$types_video_image_webp_2x} 2x, {$types_video_image_webp} 1x">
-                                                        <img srcset="{$types_video_image_2x} 2x, {$types_video_image} 1x" width="1206" height="678" alt="{$row.title | escape}">
+                                                        <img src="{$types_video_image}" srcset="{$types_video_image_2x} 2x, {$types_video_image} 1x" width="1206" height="678" alt="{$row.title | escape}">
                                                     </picture>
 
                                                     <svg class="video-page__video-play" width="98" height="118">
@@ -239,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         {/if}
 
     </main>

@@ -20,7 +20,7 @@
         <p class="thankyou__title"><span>{'thankyou_title' | config}</span>{'thankyou_subtitle' | config}</p>
         <picture class="thankyou__picture">
             <source type="image/webp" srcset="assets/theme/img/thankyou@2x.webp 2x, assets/theme/img/thankyou.webp 1x">
-            <img srcset="assets/theme/img/thankyou@2x.png 2x, assets/theme/img/thankyou.png 1x" alt="{'site_name' | config | escape}" width="429" height="429">
+            <img src="assets/theme/img/thankyou.png" srcset="assets/theme/img/thankyou@2x.png 2x, assets/theme/img/thankyou.png 1x" alt="{'site_name' | config | escape}" width="429" height="429">
         </picture>
     </div>
 </div>

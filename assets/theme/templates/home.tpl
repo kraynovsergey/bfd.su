@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="home-intro__text letter-spacing animation-lines">
-                            <p data-aos="lines" data-aos-offset="0" data-aos-delay="400">{$_modx->resource.intro_subtitle}</p>
+                            <h1 data-aos="lines" data-aos-offset="0" data-aos-delay="400">{$_modx->resource.intro_subtitle}</h1>
                         </div>
 
                         <div class="home-intro__text letter-spacing home-intro__links _mobile animation-lines">
@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section class="rellax _black" data-rellax-speed="2">
+        <div class="rellax _black" data-rellax-speed="2">
             {set $mobile_detect = $_modx->runSnippet('@FILE:snippets/mobile_detect.php')}
             {if $_modx->resource.video and $mobile_detect == '0'}
                 <section class="section _pt0">
@@ -93,7 +93,7 @@
                 <div class="container">
                     {if $_modx->resource.about_title}
                         <div class="home-about__title animation-lines">
-                            <p data-aos="lines">{$_modx->resource.about_title}</p>
+                            <h2 data-aos="lines">{$_modx->resource.about_title}</h2>
                         </div>
                     {/if}
 
@@ -104,11 +104,11 @@
                     {/if}
                 </div>
             </section>
-        </section>
+        </div>
         
         {set $pluses = json_decode($_modx->resource.pluses, true)}
         {if $pluses | length > 0 and $_modx->resource.pluses_show == 1}
-            <section class="section home-pluses">
+            <div class="section home-pluses">
                 <div class="container home-pluses__container">
                     {foreach $pluses as $row}
                         <article class="home-pluses__item">
@@ -122,7 +122,7 @@
                         </article>
                     {/foreach}
                 </div>
-            </section>
+            </div>
         {/if}
 
         <section class="section home-cases">
@@ -177,7 +177,7 @@
 
         <section class="section clients">
             {*<div class="clients__title marquee" data-aos="opacity" data-duration="15000" data-direction="right"><span>Клиенты</span></div>*}
-            <div class="clients__title marquee" data-duration="15000" data-direction="right"><span>Клиенты</span></div>
+            <h2 class="clients__title marquee" data-duration="15000" data-direction="right"><span>Клиенты</span></h2>
             <div class="clear"></div>
             {*<div class="clients__logos marquee" data-aos="opacity" data-duration="10000" data-direction="left">*}
             <div class="clients__logos marquee" data-duration="10000" data-direction="left">

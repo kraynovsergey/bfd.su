@@ -21,7 +21,7 @@
 
     <picture class="cases__picture">
         <source type="image/webp" srcset="{$img_webp_2x} 2x, {$img_webp} 1x">
-        <img srcset="{$img_2x} 2x, {$img} 1x" alt="{$pagetitle | escape}" width="347" height="195">
+        <img src="{$img}" srcset="{$img_2x} 2x, {$img} 1x" alt="{$pagetitle | escape}" width="347" height="195">
     </picture>
     
     <div class="cases__content">

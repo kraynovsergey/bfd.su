@@ -1,11 +1,13 @@
 .home-about {
     &__title {
-        font-size: clamp(24px, 5.2vw, 100px);
-        letter-spacing: calc(clamp(1.92px, .41vw, 8px) * -1);
-        line-height: 90%;
-
-        & p {
+        & p,
+        & h2 {
             margin: 0;
+            font-size: clamp(24px, 5.2vw, 100px);
+            letter-spacing: calc(clamp(1.92px, .41vw, 8px) * -1);
+            line-height: 90%;
+            padding: 0;
+            font-weight: normal;
         }
 
         & span {

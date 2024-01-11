@@ -1,9 +1,9 @@
 <article class="services__item" style="background: {$background};" {if 'animation_spoiler' | config == 1}data-case-hover{else}data-case{/if} data-aos="fade-up">
-    <button class="services__header btn-reset" type="button">
+    <div class="services__header btn-reset">
         <div class="services__num"><span>{if $idx < 10}0{/if}{$idx}</span></div>
         <h3 class="services__title">{$menutitle ?: $pagetitle}</h3>
         <div class="services__plus"><span></span></div>
-    </button>
+    </div>
     <div class="services__content-outer" data-case-content>
         <div class="services__content-wrap" data-case-content-height>
             <div class="services__content-num"></div>

@@ -55,6 +55,7 @@
         align-items: center;
         text-align: left;
         padding: clamp(10px, 2.08vw, 40px) clamp(20px, 2.08vw, 40px) clamp(10px, 2.08vw, 40px) 0;
+        cursor: pointer;
 
         @media (max-width: 575px) {
             grid-template-columns: .3fr .65fr .05fr;

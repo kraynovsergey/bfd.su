@@ -63,7 +63,7 @@
                                     <article class="worker">
                                         <picture class="worker__picture">
                                             <source type="image/webp" srcset="{$image_webp_2x} 2x, {$image_webp} 1x">
-                                            <img srcset="{$image_2x} 2x, {$image} 1x" alt="{$row.title | escape}" width="450" height="550" data-aos="zoom-out">
+                                            <img src="{$image}" srcset="{$image_2x} 2x, {$image} 1x" alt="{$row.title | escape}" width="450" height="550" data-aos="zoom-out">
                                         </picture>
                                         <h3 class="worker__title">{$row.title}</h3>
                                         {if $row.text}

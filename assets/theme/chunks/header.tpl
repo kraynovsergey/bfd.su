@@ -40,6 +40,13 @@
                                     <span class="animation-chars__title" data-split-words-chars>{$menutitle}</span>
                                 </a>
                             </li>'
+                        'tplHere' => '@INLINE 
+                            <li class="header__listitem">
+                                <span class="header__link animation-chars">
+                                    <span class="animation-chars__title" data-split-words-chars>{$menutitle}</span>
+                                    <span class="animation-chars__title" data-split-words-chars>{$menutitle}</span>
+                                </span>
+                            </li>'
                     ]}
                 </nav>
 

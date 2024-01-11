@@ -92,8 +92,12 @@
     &__text {
         text-transform: uppercase;
 
-        & p {
+        & p,
+        & h1  {
             margin: 0;
+            padding: 0;
+            font-weight: normal;
+            font-size: 1rem;
         }
     }
 

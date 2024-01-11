@@ -1,4 +1,4 @@
-<section id="mse2_mfilter" class="msearch2">
+<div id="mse2_mfilter" class="msearch2">
     <form class="filter" action="{$_modx->resource.id | url}" method="post" id="mse2_filters">
         <div class="filter__line" data-aos="left-right-full"></div>
         {$filters}
@@ -13,4 +13,4 @@
     <div class="mse2_pagination">
         {'page.nav' | placeholder}
     </div>
-</section>
+</div>
