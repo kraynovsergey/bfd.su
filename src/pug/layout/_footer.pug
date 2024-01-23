@@ -27,4 +27,11 @@ footer.footer(class=no_animation)
                 span.animation-chars__title(data-split-words-chars) +7 495 150-17-20
             .footer__item 107061, город Москва, Преображенская пл, д. 8
 
-.cursor(data-cursor)
+.cursor(id="cursor" style="filter: url('#goo');")
+
+svg(xmlns="http://www.w3.org/2000/svg" version="1.1" width="800")
+    defs
+        filter(id="goo")
+            feGaussianBlur(in="SourceGraphic" stdDeviation="6" result="blur")
+            feColorMatrix(in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo")
+            feComposite(in="SourceGraphic" in2="goo" operator="atop")
