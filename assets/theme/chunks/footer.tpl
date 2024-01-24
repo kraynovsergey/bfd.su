@@ -49,7 +49,7 @@
 
 <div class="cursor" id="cursor" style="filter: url('#goo');"></div>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
     <defs>
         <filter id="goo">
             <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
