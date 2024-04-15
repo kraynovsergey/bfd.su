@@ -5,7 +5,7 @@
         {if $_modx->resource.intro_image}
             {set $intro_image = 'pThumb' | snippet : [
                 'input' => $_modx->resource.intro_image,
-                'options' => 'w=1920&h=1080&zc=1&q=90&f=jpg'
+                'options' => 'w=1920&zc=1&q=90&f=jpg'
             ]}
         {else}
             {set $intro_image = 'assets/theme/img/home-intro-empty.png'}

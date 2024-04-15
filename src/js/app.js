@@ -180,6 +180,26 @@ $(document).ready(function () {
         dropRadius: 20,
         resolution: 512
     });
+
+    /* Волны просто при скролле */
+    const ripples_block = document.querySelector('[data-ripples-img]');
+    if (ripples_block) {
+        const ripples_block_position = ripples_block.getBoundingClientRect();
+
+        let ripples_block_mouse_x = 0,
+            ripples_block_mouse_y = 0;
+
+        ripples_block.addEventListener('mousemove', (e) => {
+            ripples_block_mouse_x = e.pageX;
+            ripples_block_mouse_y = e.pageY;
+        })
+
+        lenis.on('scroll', (e) => {
+            if (e.animatedScroll < ripples_block_position.bottom) {
+                $('[data-ripples-img]').ripples('drop', ripples_block_mouse_x, ripples_block_mouse_y + e.animatedScroll, 20, 0.04);
+            }
+        });
+    }
 });
 
 /* Анимация круглых кнопок */

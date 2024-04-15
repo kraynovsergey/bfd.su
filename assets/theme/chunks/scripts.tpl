@@ -1,8 +1,8 @@
-<script src="assets/theme/js/app.min.js"></script>
-
 {if $_modx->resource.template == 13}
     <script src="assets/theme/js/jquery-3.7.1.min.js"></script>
 {/if}
+
+<script defer="defer" src="assets/theme/js/app.min.js"></script>
 
 {if $_modx->resource.template == 18}
     <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&amp;lang=ru_RU"></script>

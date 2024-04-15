@@ -1,8 +1,9 @@
 .home-intro {
     background-size: cover;
-    background-position: center center;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     display: flex;
+    animation: bg-move 10s ease-in-out infinite;
 
     & canvas {
         height: 100% !important;
@@ -152,5 +153,23 @@
         height: 100%;
         z-index: -3;
         object-fit: cover;
+    }
+}
+
+@keyframes bg-move {
+    0% {
+        background-position: 50% 50%;
+    }
+    25% {
+        background-position: 50% 60%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 50% 40%;
+    }
+    100% {
+        background-position: 50% 50%;
     }
 }

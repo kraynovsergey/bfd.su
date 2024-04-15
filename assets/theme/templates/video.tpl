@@ -214,12 +214,12 @@
                                         'options' => 'w=2412&h=1356&zc=1&q=90&f=webp'
                                     ]}
 
-                                    <div class="video-page__accordion" {if 'animation_spoiler' | config == 1}data-case-hover{else}data-case{/if}>
+                                    <div class="video-page__accordion{$row@index == 0 ? ' _active' : ''}" {if 'animation_spoiler' | config == 1}data-case-hover{else}data-case{/if}>
                                         <div class="video-page__accordion-overlay" data-aos="left-right" data-aos-once="true"></div>
 
                                         <button class="video-page__accordion-title btn-reset letter-spacing" type="button">{$row.title}<span></span></button>
 
-                                        <div class="video-page__accordion-content-wrap" data-case-content>
+                                        <div class="video-page__accordion-content-wrap" data-case-content {$row@index == 0 ? 'style="height: unset;"' : ''}>
                                             <div class="video-page__accordion-content" data-case-content-height>
                                                 <a class="video-page__video" href="{if $row.video}{$video}{else}{$row.youtube}{/if}" data-fancybox>
                                                     <picture>

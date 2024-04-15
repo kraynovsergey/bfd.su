@@ -902,6 +902,7 @@ body .h1-big span {
   position: sticky;
   top: 0;
   z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
 }
 
 .header__container {
@@ -1096,9 +1097,10 @@ body .h1-big span {
 
 .home-intro {
   background-size: cover;
-  background-position: center center;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   display: flex;
+  animation: bg-move 10s ease-in-out infinite;
 }
 
 .home-intro canvas {
@@ -1199,6 +1201,28 @@ body .h1-big span {
   z-index: -3;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@keyframes bg-move {
+  0% {
+    background-position: 50% 50%;
+  }
+
+  25% {
+    background-position: 50% 60%;
+  }
+
+  50% {
+    background-position: 50% 50%;
+  }
+
+  75% {
+    background-position: 50% 40%;
+  }
+
+  100% {
+    background-position: 50% 50%;
+  }
 }
 
 .home-about__title p,
@@ -2599,7 +2623,7 @@ body .h1-big span {
   font-size: clamp(30px, 7.81vw, 150px);
   letter-spacing: calc(clamp(2.4px, 0.62vw, 12px) * -1);
   font-weight: 400;
-  line-height: 90%;
+  line-height: 125%;
   margin: clamp(30px, 2.6vw, 50px) 0;
   color: #9CFE00;
 }
@@ -3085,6 +3109,7 @@ body .h1-big span {
 
   .case__pictures {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 

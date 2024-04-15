@@ -30,7 +30,12 @@
                 {if $mobile_detect == '1'}
                     {include 'file:chunks/portfolio/portfolio_home_item_image.tpl'}
                 {else}
-                    <video class="home-cases__video" autoplay muted loop playsinline>
+                    {set $image_webp_2x = 'pThumb' | snippet : [
+                        'input' => $image_home,
+                        'options' => 'w=1184&h=1184&zc=1&q=90&f=webp'
+                    ]}
+
+                    <video class="home-cases__video" autoplay muted loop playsinline poster="{$image_webp_2x}">
                         <source type="video/mp4" src="{$video_home}">
                     </video>
                 {/if}
