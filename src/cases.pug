@@ -8,70 +8,78 @@ block meta
 block main
     main.main
         section.section._pt0
-            .container
+            .container(data-single-accordion)
                 h1.h1-big.animation-lines
                     span(data-aos="lines") Кейсы
 
-                form.filter(action="#")
-                    .filter__line(data-aos="left-right-full")
+                form.filter.ac(action="#")
+                    .filter__line(data-aos="left-right-full" data-aos-offset="50")
 
-                    fieldset.filter__fieldset(data-filter-fieldset)
-                        .filter__fieldset-title.letter-spacing.animation-lines
-                            span(data-aos="lines") Индустрия:
-                        .filter__fieldset-content
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="100")
-                                input(type="radio" name="industry" value="" id="industry-1" data-first checked)
-                                label.letter-spacing(for="industry-1" data-magnetic-text) Все
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="200")
-                                input(type="radio" name="industry" value="" id="industry-2")
-                                label.letter-spacing(for="industry-2" data-magnetic-text) Корпоративный сайт
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="300")
-                                input(type="radio" name="industry" value="" id="industry-3")
-                                label.letter-spacing(for="industry-3" data-magnetic-text) Интернет-магазин
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="400")
-                                input(type="radio" name="industry" value="" id="industry-4")
-                                label.letter-spacing(for="industry-4" data-magnetic-text) Лендинг
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="500")
-                                input(type="radio" name="industry" value="" id="industry-5")
-                                label.letter-spacing(for="industry-5" data-magnetic-text) Прототип
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="600")
-                                input(type="radio" name="industry" value="" id="industry-6")
-                                label.letter-spacing(for="industry-6" data-magnetic-text) CRM
+                    button.filter__btn.btn-reset.ac-trigger(type="button" data-aos="fade-up") 
+                        span.animation-chars
+                            span.animation-chars__title(data-split-words-chars) Раскрыть фильтры
+                            span.animation-chars__title(data-split-words-chars) Раскрыть фильтры
+                        svg(width="22" height="20")
+                            use(xlink:href="@img/icons/icons.svg#filter")
 
-                        .filter__reset-wrap
-                            button.filter__reset.btn-reset(type="button" data-filter-reset)
+                    .filter__content.ac-panel
+                        fieldset.filter__fieldset(data-filter-fieldset)
+                            .filter__fieldset-title.letter-spacing.animation-lines
+                                span Индустрия:
+                            .filter__fieldset-content
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-1" data-first checked)
+                                    label.letter-spacing(for="industry-1" data-magnetic-text) Все
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-2")
+                                    label.letter-spacing(for="industry-2" data-magnetic-text) Корпоративный сайт
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-3")
+                                    label.letter-spacing(for="industry-3" data-magnetic-text) Интернет-магазин
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-4")
+                                    label.letter-spacing(for="industry-4" data-magnetic-text) Лендинг
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-5")
+                                    label.letter-spacing(for="industry-5" data-magnetic-text) Прототип
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="industry" value="" id="industry-6")
+                                    label.letter-spacing(for="industry-6" data-magnetic-text) CRM
 
-                    fieldset.filter__fieldset(data-filter-fieldset)
-                        .filter__fieldset-title.letter-spacing.animation-lines
-                            span(data-aos="lines") Тип проекта:
-                        .filter__fieldset-content
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="100")
-                                input(type="radio" name="type" value="" id="type-1" data-first checked)
-                                label.letter-spacing(for="type-1" data-magnetic-text) Все
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="200")
-                                input(type="radio" name="type" value="" id="type-2")
-                                label.letter-spacing(for="type-2" data-magnetic-text) СМИ
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="300")
-                                input(type="radio" name="type" value="" id="type-3")
-                                label.letter-spacing(for="type-3" data-magnetic-text) Недвижимость
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="400")
-                                input(type="radio" name="type" value="" id="type-4")
-                                label.letter-spacing(for="type-4" data-magnetic-text) Производство
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="500")
-                                input(type="radio" name="type" value="" id="type-5")
-                                label.letter-spacing(for="type-5" data-magnetic-text) Услуги и сервис
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="600")
-                                input(type="radio" name="type" value="" id="type-6")
-                                label.letter-spacing(for="type-6" data-magnetic-text) Красота и здоровье
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="700")
-                                input(type="radio" name="type" value="" id="type-7")
-                                label.letter-spacing(for="type-7" data-magnetic-text) 3D
-                            .filter__radio(data-magnetic data-aos="opacity" data-aos-delay="800")
-                                input(type="radio" name="type" value="" id="type-8")
-                                label.letter-spacing(for="type-8" data-magnetic-text) Ритейл
+                            .filter__reset-wrap
+                                button.filter__reset.btn-reset(type="button" data-filter-reset)
 
-                        .filter__reset-wrap
-                            button.filter__reset.btn-reset(type="button" data-filter-reset)
+                        fieldset.filter__fieldset(data-filter-fieldset)
+                            .filter__fieldset-title.letter-spacing.animation-lines
+                                span Тип проекта:
+                            .filter__fieldset-content
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-1" data-first checked)
+                                    label.letter-spacing(for="type-1" data-magnetic-text) Все
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-2")
+                                    label.letter-spacing(for="type-2" data-magnetic-text) СМИ
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-3")
+                                    label.letter-spacing(for="type-3" data-magnetic-text) Недвижимость
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-4")
+                                    label.letter-spacing(for="type-4" data-magnetic-text) Производство
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-5")
+                                    label.letter-spacing(for="type-5" data-magnetic-text) Услуги и сервис
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-6")
+                                    label.letter-spacing(for="type-6" data-magnetic-text) Красота и здоровье
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-7")
+                                    label.letter-spacing(for="type-7" data-magnetic-text) 3D
+                                .filter__radio(data-magnetic)
+                                    input(type="radio" name="type" value="" id="type-8")
+                                    label.letter-spacing(for="type-8" data-magnetic-text) Ритейл
+
+                            .filter__reset-wrap
+                                button.filter__reset.btn-reset(type="button" data-filter-reset)
 
                 .cases
                     +cases_item_no_animation('case-1', 'Kenigo', '(2022)', '(Услуги и сервис)', '(Корпоративный сайт)', '#2C4EC7')

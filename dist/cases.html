@@ -55,82 +55,89 @@
     </header>
     <main class="main">
       <section class="section _pt0">
-        <div class="container">
+        <div class="container" data-single-accordion>
           <h1 class="h1-big animation-lines"><span data-aos="lines">Кейсы</span></h1>
-          <form class="filter" action="#">
-            <div class="filter__line" data-aos="left-right-full"></div>
-            <fieldset class="filter__fieldset" data-filter-fieldset>
-              <div class="filter__fieldset-title letter-spacing animation-lines"><span data-aos="lines">Индустрия:</span></div>
-              <div class="filter__fieldset-content">
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="100">
-                  <input type="radio" name="industry" value="" id="industry-1" data-first checked>
-                  <label class="letter-spacing" for="industry-1" data-magnetic-text>Все</label>
+          <form class="filter ac" action="#">
+            <div class="filter__line" data-aos="left-right-full" data-aos-offset="50"></div>
+            <button class="filter__btn btn-reset ac-trigger" type="button" data-aos="fade-up"> <span class="animation-chars"><span class="animation-chars__title" data-split-words-chars>Раскрыть фильтры</span><span class="animation-chars__title" data-split-words-chars>Раскрыть фильтры</span></span>
+              <svg width="22" height="20">
+                <use xlink:href="img/icons/icons.svg#filter"></use>
+              </svg>
+            </button>
+            <div class="filter__content ac-panel">
+              <fieldset class="filter__fieldset" data-filter-fieldset>
+                <div class="filter__fieldset-title letter-spacing animation-lines"><span>Индустрия:</span></div>
+                <div class="filter__fieldset-content">
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-1" data-first checked>
+                    <label class="letter-spacing" for="industry-1" data-magnetic-text>Все</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-2">
+                    <label class="letter-spacing" for="industry-2" data-magnetic-text>Корпоративный сайт</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-3">
+                    <label class="letter-spacing" for="industry-3" data-magnetic-text>Интернет-магазин</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-4">
+                    <label class="letter-spacing" for="industry-4" data-magnetic-text>Лендинг</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-5">
+                    <label class="letter-spacing" for="industry-5" data-magnetic-text>Прототип</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="industry" value="" id="industry-6">
+                    <label class="letter-spacing" for="industry-6" data-magnetic-text>CRM</label>
+                  </div>
                 </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="200">
-                  <input type="radio" name="industry" value="" id="industry-2">
-                  <label class="letter-spacing" for="industry-2" data-magnetic-text>Корпоративный сайт</label>
+                <div class="filter__reset-wrap">
+                  <button class="filter__reset btn-reset" type="button" data-filter-reset></button>
                 </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="300">
-                  <input type="radio" name="industry" value="" id="industry-3">
-                  <label class="letter-spacing" for="industry-3" data-magnetic-text>Интернет-магазин</label>
+              </fieldset>
+              <fieldset class="filter__fieldset" data-filter-fieldset>
+                <div class="filter__fieldset-title letter-spacing animation-lines"><span>Тип проекта:</span></div>
+                <div class="filter__fieldset-content">
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-1" data-first checked>
+                    <label class="letter-spacing" for="type-1" data-magnetic-text>Все</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-2">
+                    <label class="letter-spacing" for="type-2" data-magnetic-text>СМИ</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-3">
+                    <label class="letter-spacing" for="type-3" data-magnetic-text>Недвижимость</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-4">
+                    <label class="letter-spacing" for="type-4" data-magnetic-text>Производство</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-5">
+                    <label class="letter-spacing" for="type-5" data-magnetic-text>Услуги и сервис</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-6">
+                    <label class="letter-spacing" for="type-6" data-magnetic-text>Красота и здоровье</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-7">
+                    <label class="letter-spacing" for="type-7" data-magnetic-text>3D</label>
+                  </div>
+                  <div class="filter__radio" data-magnetic>
+                    <input type="radio" name="type" value="" id="type-8">
+                    <label class="letter-spacing" for="type-8" data-magnetic-text>Ритейл</label>
+                  </div>
                 </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="400">
-                  <input type="radio" name="industry" value="" id="industry-4">
-                  <label class="letter-spacing" for="industry-4" data-magnetic-text>Лендинг</label>
+                <div class="filter__reset-wrap">
+                  <button class="filter__reset btn-reset" type="button" data-filter-reset></button>
                 </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="500">
-                  <input type="radio" name="industry" value="" id="industry-5">
-                  <label class="letter-spacing" for="industry-5" data-magnetic-text>Прототип</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="600">
-                  <input type="radio" name="industry" value="" id="industry-6">
-                  <label class="letter-spacing" for="industry-6" data-magnetic-text>CRM</label>
-                </div>
-              </div>
-              <div class="filter__reset-wrap">
-                <button class="filter__reset btn-reset" type="button" data-filter-reset></button>
-              </div>
-            </fieldset>
-            <fieldset class="filter__fieldset" data-filter-fieldset>
-              <div class="filter__fieldset-title letter-spacing animation-lines"><span data-aos="lines">Тип проекта:</span></div>
-              <div class="filter__fieldset-content">
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="100">
-                  <input type="radio" name="type" value="" id="type-1" data-first checked>
-                  <label class="letter-spacing" for="type-1" data-magnetic-text>Все</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="200">
-                  <input type="radio" name="type" value="" id="type-2">
-                  <label class="letter-spacing" for="type-2" data-magnetic-text>СМИ</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="300">
-                  <input type="radio" name="type" value="" id="type-3">
-                  <label class="letter-spacing" for="type-3" data-magnetic-text>Недвижимость</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="400">
-                  <input type="radio" name="type" value="" id="type-4">
-                  <label class="letter-spacing" for="type-4" data-magnetic-text>Производство</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="500">
-                  <input type="radio" name="type" value="" id="type-5">
-                  <label class="letter-spacing" for="type-5" data-magnetic-text>Услуги и сервис</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="600">
-                  <input type="radio" name="type" value="" id="type-6">
-                  <label class="letter-spacing" for="type-6" data-magnetic-text>Красота и здоровье</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="700">
-                  <input type="radio" name="type" value="" id="type-7">
-                  <label class="letter-spacing" for="type-7" data-magnetic-text>3D</label>
-                </div>
-                <div class="filter__radio" data-magnetic data-aos="opacity" data-aos-delay="800">
-                  <input type="radio" name="type" value="" id="type-8">
-                  <label class="letter-spacing" for="type-8" data-magnetic-text>Ритейл</label>
-                </div>
-              </div>
-              <div class="filter__reset-wrap">
-                <button class="filter__reset btn-reset" type="button" data-filter-reset></button>
-              </div>
-            </fieldset>
+              </fieldset>
+            </div>
           </form>
           <div class="cases">
                 <article class="cases__item" style="background: #2C4EC7;" data-aos="fade-up">

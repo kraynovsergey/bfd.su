@@ -37,16 +37,17 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
-    "jquery": "^3.7.1",
-    "jquery.ripples": "^0.6.3",
-    "jquery.marquee": "^1.6.0",
-    "gsap": "^3.12.2",
-    "split-type": "^0.3.3",
     "@fancyapps/ui": "^5.0.24",
     "@studio-freight/lenis": "^1.0.27",
+    "accordion-js": "^3.3.4",
     "aos": "^2.3.4",
+    "gsap": "^3.12.2",
+    "jquery": "^3.7.1",
+    "jquery.marquee": "^1.6.0",
+    "jquery.ripples": "^0.6.3",
     "matter-js": "^0.19.0",
     "rellax": "^1.12.1",
+    "split-type": "^0.3.3",
     "swiper": "^10.3.1"
   }
 }

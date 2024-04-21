@@ -598,6 +598,20 @@ progress {
   }
 }
 
+.ac .ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac._active .ac-panel {
+  visibility: visible;
+}
+
 .link._full::after {
   content: "";
   position: absolute;
@@ -1818,11 +1832,10 @@ body .h1-big span {
 
 .filter {
   margin: clamp(37px, 5.2vw, 100px) 0 clamp(20px, 2.6vw, 50px);
-  padding-bottom: clamp(20px, 2.6vw, 50px);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2.6vw, 50px);
+  align-items: flex-start;
 }
 
 .filter__fieldset {
@@ -1917,6 +1930,33 @@ body .h1-big span {
   background: #9CFE00;
   position: absolute;
   bottom: 0;
+}
+
+.filter__btn {
+  color: #9CFE00;
+  font-size: clamp(14px, 10.1165048544px + 0.0103559871 * 100vw, 30px);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 10.1165048544px + 0.0103559871 * 100vw, 30px);
+  margin-bottom: clamp(20px, 12.7184466019px + 0.0194174757 * 100vw, 50px);
+}
+
+.filter__btn svg {
+  height: clamp(14px, 12.5436893204px + 0.0038834951 * 100vw, 20px);
+  width: auto;
+}
+
+.filter__content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 2.6vw, 50px);
+  visibility: hidden;
+  height: 0;
+}
+
+.filter__content::after {
+  content: "";
 }
 
 .cases {

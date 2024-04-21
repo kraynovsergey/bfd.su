@@ -4,6 +4,7 @@
 @import "../../node_modules/swiper/swiper.css";
 
 /* CORE */
+@import "core/_clamp";
 @import "core/_variables";
 @import "core/_fonts";
 @import "core/_default";
@@ -11,6 +12,7 @@
 
 /* COMPONENTS */
 @import "components/_btn";
+@import "components/_accordion";
 @import "components/_link";
 @import "components/_picture";
 @import "components/_scroll";

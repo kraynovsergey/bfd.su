@@ -1,10 +1,9 @@
 .filter {
     margin: clamp(37px, 5.2vw, 100px) 0 clamp(20px, 2.6vw, 50px);
-    padding-bottom: clamp(20px, 2.6vw, 50px);
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 2.6vw, 50px);
+    align-items: flex-start;
 
     &__fieldset {
         display: grid;
@@ -112,5 +111,32 @@
         background: $color_green;
         position: absolute;
         bottom: 0;
+    }
+
+    &__btn {
+        color: $color_green;
+        font-size: clamp-calc(14px, 30px);
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: clamp-calc(14px, 30px);
+        margin-bottom: clamp-calc(20px, 50px);
+
+        & svg {
+            height: clamp-calc(14px, 20px);
+            width: auto;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 2.6vw, 50px);
+        visibility: hidden;
+        height: 0;
+        
+        &::after {
+            content: '';
+        }
     }
 }

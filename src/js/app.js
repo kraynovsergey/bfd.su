@@ -10,6 +10,7 @@ import Matter from 'matter-js';
 import jqueryMarqueeMin from 'jquery.marquee';
 import Swiper from 'swiper';
 import { Navigation } from "swiper/modules";
+import Accordion from 'accordion-js';
 
 /* Прелоадер */
 function preloader() {
@@ -772,6 +773,23 @@ const positionCursor = delta => {
 };
 
 init();
+
+const single_accordion = document.querySelector('[data-single-accordion]');
+if (single_accordion) {
+    new Accordion(single_accordion, {
+        'activeClass': '_active',
+        beforeOpen: (currElement) => {
+            single_accordion.querySelectorAll('.ac-trigger .animation-chars__title').forEach(item => {
+                item.innerHTML = 'Скрыть фильтры';
+            });
+        },
+        beforeClose: (currElement) => {
+            single_accordion.querySelectorAll('.ac-trigger .animation-chars__title').forEach(item => {
+                item.innerHTML = 'Раскрыть фильтры';
+            });
+        }
+    });
+}
 
 document.addEventListener('fetchit:success', (e) => { 
     Fancybox.close();
