@@ -6,12 +6,17 @@
             </svg>
         </a>
         
-        {if 'showreel_video' | config}
-            <a class="header__link header__showreel animation-chars" href="{'showreel_video' | config}" data-fancybox>
+        <div class="header__showreel">
+            <a class="header__link animation-chars" href="{'showreel_video' | config}" data-fancybox>
                 <span class="animation-chars__title" data-split-words-chars>Showreel</span>
                 <span class="animation-chars__title" data-split-words-chars>Showreel</span>
             </a>
-        {/if}
+            /
+            <a class="header__link animation-chars" href="https://www.awwwards.com/sites/https-bfd-su" target="_blank" rel="nofollow">
+                <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
+                <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
+            </a>
+        </div>
 
         <div class="header__navigation" id="header-navigation" data-lenis-prevent>
             <div class="header__navigation-wrap">
@@ -32,6 +37,12 @@
                                         </a>
                                     </li>
                                 {/if}
+                                <li class="header__listitem _mobile">
+                                    <a class="header__link animation-chars" href="https://www.awwwards.com/sites/https-bfd-su" target="_blank" rel="nofollow">
+                                        <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
+                                        <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
+                                    </a>
+                                </li>
                             </ul>',
                         'tpl' => '@INLINE 
                             <li class="header__listitem">

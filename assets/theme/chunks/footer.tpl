@@ -13,9 +13,9 @@
         </svg>
 
         <div class="footer__items">
-            <a class="footer__item footer__link animation-chars" href="tel:{'phone' | config | replace : '(' : '' | replace : ')' : '' | replace : '-' : '' | replace : ' ' : ''}">
-                <span class="animation-chars__title" data-split-words-chars>ПОЗВОНИТЬ</span>
-                <span class="animation-chars__title" data-split-words-chars>ПОЗВОНИТЬ</span>
+            <a class="footer__item footer__link animation-chars" href="https://www.awwwards.com/sites/https-bfd-su" target="_blank" rel="nofollow">
+                <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
+                <span class="animation-chars__title" data-split-words-chars>AWWWARDS</span>
             </a>
             
             {if 'vk' | config}

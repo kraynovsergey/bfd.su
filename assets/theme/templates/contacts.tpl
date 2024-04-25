@@ -23,6 +23,12 @@
                                 </svg>
                             </a>
                         {/if}
+
+                        <a class="contacts__social" href="https://www.awwwards.com/sites/https-bfd-su" target="_blank" rel="nofollow" data-magnetic>
+                            <svg width="60" height="32" data-magnetic-text>
+                                <use xlink:href="assets/theme/img/icons/icons.svg#w"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
@@ -62,6 +68,6 @@
             </div>
         </div>
         
-        <div class="contacts__map" id="map" data-aos="opaciy" data-aos-delay="600"></div>
+        {*<div class="contacts__map" id="map" data-aos="opaciy" data-aos-delay="600"></div>*}
     </main>
 {/block}

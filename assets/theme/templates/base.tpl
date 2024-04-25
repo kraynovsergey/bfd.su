@@ -3,7 +3,7 @@
 <head>
     {include 'file:chunks/meta.tpl'}
 </head>
-<body class="scroll _hidden">
+<body>
     <div class="preloader" data-preloader>
         <div class="preloader__progress"></div>
         <div class="container">

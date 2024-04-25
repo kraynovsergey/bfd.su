@@ -5,6 +5,10 @@
     display: flex;
     animation: bg-move 10s ease-in-out infinite;
 
+    @media (max-width: 991px) {
+        animation: bg-move-mobile 10s ease-in-out infinite;
+    }
+
     & canvas {
         height: 100% !important;
     }
@@ -168,6 +172,24 @@
     }
     75% {
         background-position: 50% 40%;
+    }
+    100% {
+        background-position: 50% 50%;
+    }
+}
+
+@keyframes bg-move-mobile {
+    0% {
+        background-position: 50% 50%;
+    }
+    25% {
+        background-position: 60% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 40% 50%;
     }
     100% {
         background-position: 50% 50%;

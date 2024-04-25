@@ -4,9 +4,14 @@ header.header
             svg(width="160" height="44")
                 use(xlink:href="@img/icons/icons.svg#logo")
 
-        a.header__link.header__showreel.animation-chars(href="files/showreel.mp4" data-fancybox)
-            span.animation-chars__title(data-split-words-chars) Showreel
-            span.animation-chars__title(data-split-words-chars) Showreel
+        .header__showreel
+            a.header__link.animation-chars(href="files/showreel.mp4" data-fancybox)
+                span.animation-chars__title(data-split-words-chars) Showreel
+                span.animation-chars__title(data-split-words-chars) Showreel
+            | /
+            a.header__link.animation-chars(href="https://www.awwwards.com/sites/https-bfd-su" target="_blank" rel="nofollow")
+                span.animation-chars__title(data-split-words-chars) AWWWARDS
+                span.animation-chars__title(data-split-words-chars) AWWWARDS
 
         div.header__navigation(id="header-navigation" data-lenis-prevent)
             .header__navigation-wrap
