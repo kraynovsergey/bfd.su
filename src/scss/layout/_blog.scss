@@ -18,6 +18,7 @@
     &__col {
         display: grid;
         gap: 23px;
+        grid-template-columns: minmax(0, 1fr);
 
         &:first-child {
             @media (width > 575px) {
