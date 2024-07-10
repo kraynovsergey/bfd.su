@@ -16,6 +16,10 @@ body .h1-big {
     padding: 0; 
     margin: 0;
 
+    &._very-big {
+        font-size: clamp-calc(60px, 385px);
+    }
+
     & span {
         display: block;
     }

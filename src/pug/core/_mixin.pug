@@ -1,0 +1,44 @@
+mixin principle(num, title, text)
+    article.principle
+        .principle__overlay(data-aos="left-right")
+        .principle__num=num
+        h3.principle__title=title
+        p.principle__text=text
+
+mixin cases_item(img, title, year, industry, type, background)
+    article.cases__item(style="background: "+background+";" data-aos="yz")
+        picture.cases__picture
+            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+            img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width="347" height="195")
+        .cases__content
+            h3.cases__title
+                a.cases__link(href="#")= title
+                    sup.letter-spacing= year
+            .cases__params
+                .cases__param
+                    .cases__param-title Отрасль
+                    .cases__param-value= industry
+                .cases__param
+                    .cases__param-title Тип проекта
+                    .cases__param-value=type
+        svg.cases__arrow(width="97" height="102")
+            use(xlink:href="@img/icons/icons.svg#arrow-right")
+
+mixin cases_item_no_animation(img, title, year, industry, type, background)
+    article.cases__item(style="background: "+background+";" data-aos="fade-up")
+        picture.cases__picture
+            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+            img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width="347" height="195")
+        .cases__content
+            h3.cases__title
+                a.cases__link(href="#")= title
+                    sup.letter-spacing= year
+            .cases__params
+                .cases__param
+                    .cases__param-title Отрасль
+                    .cases__param-value= industry
+                .cases__param
+                    .cases__param-title Тип проекта
+                    .cases__param-value=type
+        svg.cases__arrow(width="97" height="102")
+            use(xlink:href="@img/icons/icons.svg#arrow-right")

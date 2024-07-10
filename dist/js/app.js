@@ -39891,6 +39891,37 @@ if (single_accordion) {
     });
 }
 
+/* Эффект параллакса при скроле */
+const picture_parallax = document.querySelectorAll('[data-picture-parallax]');
+if (picture_parallax.length > 0) {
+    picture_parallax.forEach(item => {
+        let moveCoef = item.getAttribute('data-picture-parallax');
+
+        if (document.documentElement.clientWidth > 575) {
+            window.addEventListener("scroll", picture_parallax_func);
+            window.addEventListener("resize", picture_parallax_func);
+            picture_parallax_func();
+        }
+
+        function picture_parallax_func() {
+            let r = item.getBoundingClientRect();
+            let paralaxYCenter = r.y + r.height / 2;
+            let scrollYCenter = window.innerHeight / 2;
+            let move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
+
+            if (item.hasAttribute('data-picture-rotate-right')) {
+                item.style.transform = 'translateY(' + move + 'px) rotate(' + (move / 8 * -1) + 'deg)';
+            } else {
+                if (item.hasAttribute('data-picture-rotate-left')) {
+                    item.style.transform = 'translateY(' + move + 'px) rotate(' + (move / 8) + 'deg)';
+                } else {
+                    item.style.transform = 'translateY(' + move + 'px)';
+                }
+            }
+        }
+    });
+}
+
 document.addEventListener('fetchit:success', (e) => { 
     Jt.close();
     

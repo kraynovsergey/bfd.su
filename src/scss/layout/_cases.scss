@@ -50,6 +50,19 @@
         margin: 0;
         padding: 0;
         line-height: 100%;
+
+        &._blog {
+            text-transform: uppercase;
+            font-size: clamp-calc(20px, 60px);
+        }
+    }
+
+    &__intro {
+        margin: 0;
+        font-size: clamp-calc(16px, 20px);
+        max-width: 600px;
+        letter-spacing: -.08em;
+        line-height: 110%;
     }
 
     &__link {

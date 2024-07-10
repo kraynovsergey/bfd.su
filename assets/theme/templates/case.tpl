@@ -2,38 +2,7 @@
 
 {block 'main'}
     <main class="main _top">
-        {set $image_header = 'pThumb' | snippet : [
-            'input' => $_modx->resource.image_header,
-            'options' => 'w=1920&zc=0&q=90&f=jpg'
-        ]}
-
-        {set $image_header_2x = 'pThumb' | snippet : [
-            'input' => $_modx->resource.image_header,
-            'options' => 'w=3840&zc=0&q=90&f=jpg'
-        ]}
-
-        {set $image_header_webp = 'pThumb' | snippet : [
-            'input' => $_modx->resource.image_header,
-            'options' => 'w=1920&zc=0&q=90&f=webp'
-        ]}
-
-        {set $image_header_webp_2x = 'pThumb' | snippet : [
-            'input' => $_modx->resource.image_header,
-            'options' => 'w=3840&zc=0&q=90&f=webp'
-        ]}
-
-        <picture class="case__intro picture" data-scroll-opacity>
-            <source type="image/webp" srcset="{$image_header_webp_2x} 2x, {$image_header_webp} 1x">
-            <img src="{$image_header}" srcset="{$image_header_2x} 2x, {$image_header} 1x" alt="{$_modx->resource.pagetitle | escape}" width="1920" height="700" data-aos="zoom-out">
-        </picture>
-
-        <div class="rellax _black" data-rellax-speed="2">
-            <div class="section _pt0 _pb0">
-                <div class="container">
-                    <h1 class="case__h1 animation-lines"><span data-aos="lines">{$_modx->resource.pagetitle}<sup>{$_modx->resource.intro_sup}</sup></span></h1>
-                </div>
-            </div>
-        </div>
+        {include 'file:chunks/case/intro.tpl'}
 
         <div class="section _pt0">
             <div class="container">

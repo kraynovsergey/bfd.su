@@ -1,0 +1,41 @@
+extends base
+
+block meta
+    - var seotitle = 'Блог'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    main.main.section.blog._pt0
+        .container
+            h1.h1-big.animation-lines._very-big
+                span(data-aos="lines") Блог
+
+            mixin blog_item(title, intro, background, img, classnames)
+                article.blog-item(style=background class=classnames)
+                    h2.blog-item__title.letter-spacing=title
+                    p.blog-item__intro=intro
+                    a.blog-item__arrow.link._full(href="article.html")
+                        svg(width="97" height="102")
+                            use(xlink:href="@img/icons/icons.svg#arrow-right")
+                    if img
+                        picture.blog-item__picture
+                            source(type="image/webp" srcset="@img/tmp/blog-img@2x.webp 2x, @img/tmp/blog-img.webp 1x")
+                            img(srcset="@img/tmp/blog-img@2x.jpg 2x, @img/tmp/blog-img.jpg 1x" alt="" width="591" height="464")
+
+            .blog__grid
+                .blog__col(data-picture-parallax="0.2")
+                    +blog_item('Адаптив в дизайне сайта', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', '', true)
+                    +blog_item('Что такое умный сайт', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', 'background-color: #c7352c')
+
+                    +blog_item('Как сделать лендинг продающим', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', 'background-color: #cf45ff', '', '_hidden')
+                    +blog_item('Адаптив в дизайне сайта', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', '', true, '_hidden')
+
+                .blog__col(data-picture-parallax="0.1")
+                    +blog_item('Адаптив в дизайне сайта', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', 'background-color: #2c4ec7')
+                    +blog_item('Прототип сайта', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', '', true)
+                    +blog_item('Нужны ли на сайте 3D-рендеры?', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', 'background-color: #33b175')
+
+                .blog__col(data-picture-parallax="0.3")
+                    +blog_item('Как сделать лендинг продающим', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', 'background-color: #cf45ff')
+                    +blog_item('Адаптив в дизайне сайта', 'На сколько важен качественный адаптивный дизйан? Давайте рассмотрим варианты применения различных вариантов верстки для типовых сайтов.', '', true)

@@ -799,6 +799,10 @@ body .h1-big {
   margin: 0;
 }
 
+body .h1-big._very-big {
+  font-size: clamp(60px, -18.8834951456px + 0.2103559871 * 100vw, 385px);
+}
+
 body .h1-big span {
   display: block;
 }
@@ -2052,6 +2056,19 @@ body .h1-big span {
   line-height: 100%;
 }
 
+.cases__title._blog {
+  text-transform: uppercase;
+  font-size: clamp(20px, 10.2912621359px + 0.0258899676 * 100vw, 60px);
+}
+
+.cases__intro {
+  margin: 0;
+  font-size: clamp(16px, 15.0291262136px + 0.0025889968 * 100vw, 20px);
+  max-width: 600px;
+  letter-spacing: -0.08em;
+  line-height: 110%;
+}
+
 .cases__link {
   color: currentColor;
   text-decoration: none;
@@ -2703,6 +2720,15 @@ body .h1-big span {
      object-fit: cover;
 }
 
+.case__intro-ripples {
+  overflow: hidden;
+  display: flex;
+  aspect-ratio: 1920/700;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .case__h1 {
   font-size: clamp(30px, 7.81vw, 150px);
   letter-spacing: calc(clamp(2.4px, 0.62vw, 12px) * -1);
@@ -2710,6 +2736,10 @@ body .h1-big span {
   line-height: 125%;
   margin: clamp(30px, 2.6vw, 50px) 0;
   color: #9CFE00;
+}
+
+.case__h1._line-height {
+  line-height: 90%;
 }
 
 .case__h1 span {
@@ -2824,6 +2854,12 @@ body .h1-big span {
   overflow: hidden;
 }
 
+.case__richtext p:not(:last-child),
+.case__richtext ul:not(:last-child),
+.case__richtext ol:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .thankyou__container {
   display: flex;
   flex-direction: column;
@@ -2912,6 +2948,90 @@ body .h1-big span {
 
 .not-found__link:hover {
   opacity: 0.2;
+}
+
+.blog__grid {
+  margin-top: clamp(50px, 29.3689320388px + 0.0550161812 * 100vw, 135px);
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.blog__col {
+  display: grid;
+  gap: 23px;
+}
+
+.blog-item {
+  border-radius: clamp(25px, 18.932038835px + 0.0161812298 * 100vw, 50px);
+  padding: clamp(30px, 26.359223301px + 0.0097087379 * 100vw, 45px) clamp(15px, 13.3009708738px + 0.0045307443 * 100vw, 22px) clamp(15px, 13.3009708738px + 0.0045307443 * 100vw, 22px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: clamp(20px, 17.572815534px + 0.0064724919 * 100vw, 30px);
+  aspect-ratio: 591/464;
+}
+
+.blog-item:hover .blog-item__arrow svg {
+  transform: translateX(30%);
+}
+
+.blog-item._hidden {
+  display: none;
+}
+
+.blog-item__title {
+  font-size: clamp(24px, 16.7184466019px + 0.0194174757 * 100vw, 54px);
+  line-height: 90%;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-item__intro {
+  font-size: clamp(16px, 15.0291262136px + 0.0025889968 * 100vw, 20px);
+  margin: 0;
+  letter-spacing: -0.08em;
+  flex-grow: 1;
+}
+
+.blog-item__arrow {
+  color: #fff;
+}
+
+.blog-item__arrow svg {
+  transition: 0.5s ease-in-out;
+  width: clamp(45px, 32.3786407767px + 0.0336569579 * 100vw, 97px);
+  height: auto;
+}
+
+.blog-item__picture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: -1;
+  border-radius: clamp(25px, 18.932038835px + 0.0161812298 * 100vw, 50px);
+  overflow: hidden;
+}
+
+.blog-item__picture::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.blog-item__picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 576px) {
@@ -3381,5 +3501,37 @@ body .h1-big span {
 
   .thankyou__picture {
     justify-content: center;
+  }
+}
+
+@media (width < 1024px) {
+  .blog__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (width < 575px) {
+  .blog__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width > 575px) {
+  .blog__col:first-child {
+    padding-top: clamp(91px, 68.9126213592px + 0.0588996764 * 100vw, 182px);
+  }
+
+  .blog__col:last-child {
+    padding-top: clamp(150px, 113.5922330097px + 0.0970873786 * 100vw, 300px);
+  }
+}
+
+@media (width < 1024px) and (width > 575px) {
+  .blog__col:last-child {
+    display: none;
+  }
+
+  .blog-item._hidden {
+    display: flex;
   }
 }

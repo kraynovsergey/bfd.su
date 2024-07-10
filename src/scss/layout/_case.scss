@@ -17,6 +17,15 @@
         }
     }
 
+    &__intro-ripples {
+        overflow: hidden;
+        display: flex;
+        aspect-ratio: 1920 / 700;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
     &__h1 {
         font-size: clamp(30px, 7.81vw, 150px);
         letter-spacing: calc(clamp(2.4px, 0.62vw, 12px) * -1);
@@ -24,6 +33,10 @@
         line-height: 125%;
         margin: clamp(30px, 2.6vw, 50px) 0;
         color: $color_green;
+
+        &._line-height {
+            line-height: 90%;
+        }
 
         & span {
             display: block;
@@ -164,5 +177,15 @@
 
     &__picture {
         overflow: hidden;
+    }
+
+    &__richtext {
+        & p,
+        & ul,
+        & ol {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
     }
 }
